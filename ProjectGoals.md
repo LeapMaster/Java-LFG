@@ -8,25 +8,27 @@ One of the more popular community-made solutions is to build an "LFG", or "Looki
 
 ### Essential
 
-- [X] Live, constantly-updating feed of detailed posts. These posts need to show all relevant data, as well as how long ago it was posted, generated with each refresh. I need to, at the very least, have a refresh button that refreshes the feed without reloading the page; using javascript for active updating would be ideal. Having both as options would be great.
+* Live, constantly-updating feed of detailed posts. These posts need to show all relevant data, as well as how long ago it was posted, generated with each refresh. I need to, at the very least, have a refresh button that refreshes the feed without reloading the page; using javascript for active updating would be ideal. Having both as options would be great.
 
-- [X] Lots of easily-configurable fields for sufficiently detailed posts.
+* Lots of easily-configurable fields for sufficiently detailed posts.
 
-- [X] Self-maintaining database. All posts need to have a limited life span to prevent storage from becoming flooded with quickly-useless data. I would ideally do this either using maximum storage values for categories, or simply having timed clearing of posts older than a certain amount. This is not a forum, this is mean to facilitate fast connections. 
+* Self-maintaining database. All posts need to have a limited life span to prevent storage from becoming flooded with quickly-useless data. I would ideally do this either using maximum storage values for categories, or simply having timed clearing of posts older than a certain amount. This is not a forum, this is mean to facilitate fast connections. 
 
-- [X] Dynamic HTML; detailed forms need to be hidden to make room to view the feed.
+* Dynamic HTML; detailed forms need to be hidden to make room to view the feed.
 
-- [X] Some kind of captcha-like validation to prevent spam/advertising from overrunning the site.
+* Some kind of captcha-like validation to prevent spam/advertising from overrunning the site.
 
-- [X] Optional account registration; cookies should be used when possible to retain data between sessions, but being able to log in could afford some streamlining of the input process.
+* Optional account registration; cookies should be used when possible to retain data between sessions, but being able to log in could afford some streamlining of the input process.
 
 ### Fun Stuff
 
-- [X] Instant, peer-to-peer, no-registration chat. Click on a User's post and talk to them! I was blown away when I saw this done on one site, and while most likely pretty challenging, it would be very cool to get this working.
+* Instant, peer-to-peer, no-registration chat. Click on a User's post and talk to them! I was blown away when I saw this done on one site, and while most likely pretty challenging, it would be very cool to get this working.
 
-- [X] Integration with game API. Being able to make character data a part of the posts would be pretty slick.
+* Integration with game API. Being able to make character data a part of the posts would be pretty slick.
 
-- [X] A live counter of users active on the site. Once again, no idea how to do this, but it'd be pretty nice to give players an immediate idea of site activity.
+* A live counter of users active on the site. Once again, no idea how to do this, but it'd be pretty nice to give players an immediate idea of site activity.
 
-- [X] Integration with advertisement or donation buttons. While I'd like to keep these minimal, it would be pretty cool to see how to go about monetization of our web sites.
+* Integration with advertisement or donation buttons. While I'd like to keep these minimal, it would be pretty cool to see how to go about monetization of our web sites.
+
+* Pretty minor, but some degree of social media involvement (such as a button to like on Facebook) would be interesting.
 
