@@ -1,1 +1,4 @@
-/home/student/IdeaProjects/IndividualProject/src/main/java/LFGPost.java
+/home/student/Java-LFG/IndividualProject/src/main/java/persistence/LFGDAO.java
+/home/student/Java-LFG/IndividualProject/src/main/java/persistence/SessionFactoryProvider.java
+/home/student/Java-LFG/IndividualProject/src/main/java/controller/TestQuery.java
+/home/student/Java-LFG/IndividualProject/src/main/java/entity/LFGPost.java

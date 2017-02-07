@@ -6,5 +6,6 @@
 </head>
 <body>
     <c:import url="jsp/header-content.jsp" />
+<a href="testQuery">Test LFG Query</a>
 </body>
 </html>
