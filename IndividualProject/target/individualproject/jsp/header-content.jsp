@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-
+<link rel="stylesheet" href="styles/index.css">
 
 <ul class="navbar">
     <li class="navitem"><img src="img/lfgLogoSmall.png" /></li>

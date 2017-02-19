@@ -1,7 +1,7 @@
 package com.sheaprewett.javalfg.controller.controller;
 
 import org.apache.log4j.Logger;
-import com.sheaprewett.javalfg.controller.persistence.LFGDAO;
+import com.sheaprewett.javalfg.controller.persistence.LFGPostDAO;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -27,7 +27,7 @@ public class TestQuery extends HttpServlet {
 
         final Logger logger = Logger.getLogger(this.getClass());
 
-        LFGDAO lfgDAO = new LFGDAO();
+        LFGPostDAO lfgDAO = new LFGPostDAO();
         request.setAttribute("allPosts", lfgDAO.getAllLFGPosts());
         System.out.println(lfgDAO.getAllLFGPosts());
 

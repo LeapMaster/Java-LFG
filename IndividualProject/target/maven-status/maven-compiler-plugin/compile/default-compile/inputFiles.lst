@@ -1,4 +1,4 @@
-/home/student/Java-LFG/IndividualProject/src/main/java/persistence/LFGDAO.java
-/home/student/Java-LFG/IndividualProject/src/main/java/persistence/SessionFactoryProvider.java
-/home/student/Java-LFG/IndividualProject/src/main/java/controller/TestQuery.java
-/home/student/Java-LFG/IndividualProject/src/main/java/entity/LFGPost.java
+/home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/controller/entity/LFGPost.java
+/home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/controller/persistence/LFGPostDAO.java
+/home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/controller/controller/TestQuery.java
+/home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/controller/persistence/SessionFactoryProvider.java
