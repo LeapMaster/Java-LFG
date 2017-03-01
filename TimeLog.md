@@ -22,3 +22,9 @@
 -1 Hour working on the activities
 -2 Hours trying to get my project on AWS
 -1 Hour solving issues with my VM
+
+###Week 7
+-1 Hour finishing up activities from week 6
+-1 Hour fixing issues with VMware
+-2 Hours getting a demo up on AWS
+
