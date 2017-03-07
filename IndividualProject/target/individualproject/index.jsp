@@ -23,7 +23,7 @@
             <div id="collapse1" class="panel-collapse collapse in">
                 <div class="panel-body">
                     <div>
-                        <form>
+                        <form action="/newPost" methodd="post">
                             <table>
                                 <tr>
                                     <td colspan="4">

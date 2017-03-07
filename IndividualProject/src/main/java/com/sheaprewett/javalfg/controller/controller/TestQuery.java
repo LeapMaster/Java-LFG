@@ -1,7 +1,8 @@
 package com.sheaprewett.javalfg.controller.controller;
 
-import org.apache.log4j.Logger;
 import com.sheaprewett.javalfg.controller.persistence.LFGPostDAO;
+import org.apache.log4j.Logger;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

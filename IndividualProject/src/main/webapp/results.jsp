@@ -8,6 +8,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@ page import="org.ocpsoft.prettytime.PrettyTime" %>
     <title>Title</title>
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/postPage.css">
@@ -15,33 +17,58 @@
 <body>
     <%@include file="jsp/header-content.jsp"%>
     <h2>All Posts</h2>
-    ${allPosts}
+    ${allPosts}<br/>
+    Array Size: ${allPosts.size()}<br/>
     <table class="table">
         <c:forEach var="currentPost" items="${allPosts}">
+            <br/>${currentPost}<br/>
             <tr>
                 <td>
-                    Platform
+                    ${currentPost.platforms}
                 </td>
                 <td>
-                    Username<br/>
-                    Level#/Class/Gear#<br/>
-                    Region
+                    ${currentPost.username}<br/>
+                    ${currentPost.level}/${currentPost.playerClass}/${currentPost.gearRating}<br/>
+                    ${currentPost.region}
                 </td>
                 <td class="description">
-                    LFG - Activity Name<br/>
-                    Description Text Goes Here
+                    <br/>
+                    ${currentPost.description}
                 </td>
                 <td>
-                    Mic<br/>
-                    Sherpa<br/>
-                    Novice<br/>
+                    ${currentPost.haveMic}<br/>
+                    Sherpa?<br/>
+                    Novice?<br/>
                 </td>
                 <td>
-                    X Minutes Ago
+                    ${currentPost.timePosted}<br/>
+                    ${currentPost.getMinutesAgo()}
                 </td>
             </tr>
 
         </c:forEach>
+        <tr>
+            <td>
+                Platform
+            </td>
+            <td>
+                Username<br/>
+                Level#/Class/Gear#<br/>
+                Region
+            </td>
+            <td class="description">
+                LFG - Activity Name<br/>
+                Description Text Goes Here
+            </td>
+            <td>
+                Mic<br/>
+                Sherpa<br/>
+                Novice<br/>
+            </td>
+            <td>
+                X Minutes Ago
+            </td>
+        </tr>
     </table>
 </body>
 </html>

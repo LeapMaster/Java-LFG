@@ -4,6 +4,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.sql.Date;
+import org.ocpsoft.prettytime.PrettyTime;
 
 /**
  * Created by student on 2/1/17.
@@ -11,7 +12,6 @@ import java.sql.Date;
 @Entity
 @Table(name = "lfg_posts")
 public class LFGPost {
-
 
     @Column(name = "platform")
     private String platform;
@@ -172,4 +172,14 @@ public class LFGPost {
                 ", postID=" + postID +
                 '}';
     }
+
+    public String getMinutesAgo() {
+        if (timePosted != null) {
+            PrettyTime p = new PrettyTime();
+            return p.format(timePosted);
+        } else {
+            return "No timestamp available";
+        }
+    }
+
 }

@@ -27,4 +27,5 @@
 -1 Hour finishing up activities from week 6
 -1 Hour fixing issues with VMware
 -2 Hours getting a demo up on AWS
-
+-3 Hours going through activities on REST
+-1 Hour setting up a quick REST Demo for Group Project 
