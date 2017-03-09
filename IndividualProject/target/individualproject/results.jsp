@@ -17,11 +17,11 @@
 <body>
     <%@include file="jsp/header-content.jsp"%>
     <h2>All Posts</h2>
-    ${allPosts}<br/>
+    <%--${allPosts}<br/>--%>
     Array Size: ${allPosts.size()}<br/>
     <table class="table">
         <c:forEach var="currentPost" items="${allPosts}">
-            <br/>${currentPost}<br/>
+            <%--<br/>${currentPost}<br/>--%>
             <tr>
                 <td>
                     ${currentPost.platform}
@@ -32,43 +32,48 @@
                     ${currentPost.region}
                 </td>
                 <td class="description">
+                    ${currentPost.lookingFor} - ${currentPost.activity}
                     <br/>
                     ${currentPost.description}
                 </td>
                 <td>
-                    ${currentPost.haveMic}<br/>
-                    Sherpa?<br/>
-                    Novice?<br/>
+                    <c:choose>
+                        <c:when test="${currentPost.haveMic == true}">
+                            <div class="divCenteredContent">
+                                <img src="img/mic.png" />
+                            </div>
+                        </c:when>
+                    </c:choose>
+                    ${currentPost.experience}
                 </td>
                 <td>
-                    ${currentPost.timePosted}<br/>
                     ${currentPost.getMinutesAgo()}
                 </td>
             </tr>
 
         </c:forEach>
-        <tr>
-            <td>
-                Platform
-            </td>
-            <td>
-                Username<br/>
-                Level#/Class/Gear#<br/>
-                Region
-            </td>
-            <td class="description">
-                LFG - Activity Name<br/>
-                Description Text Goes Here
-            </td>
-            <td>
-                Mic<br/>
-                Sherpa<br/>
-                Novice<br/>
-            </td>
-            <td>
-                X Minutes Ago
-            </td>
-        </tr>
+        <%--<tr>--%>
+            <%--<td>--%>
+                <%--Platform--%>
+            <%--</td>--%>
+            <%--<td>--%>
+                <%--Username<br/>--%>
+                <%--Level#/Class/Gear#<br/>--%>
+                <%--Region--%>
+            <%--</td>--%>
+            <%--<td class="description">--%>
+                <%--LFG - Activity Name<br/>--%>
+                <%--Description Text Goes Here--%>
+            <%--</td>--%>
+            <%--<td>--%>
+                <%--Mic<br/>--%>
+                <%--Sherpa<br/>--%>
+                <%--Novice<br/>--%>
+            <%--</td>--%>
+            <%--<td>--%>
+                <%--X Minutes Ago--%>
+            <%--</td>--%>
+        <%--</tr>--%>
     </table>
 </body>
 </html>

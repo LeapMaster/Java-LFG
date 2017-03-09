@@ -176,6 +176,8 @@ public class LFGPost {
                 ", haveMic=" + haveMic +
                 ", timePosted=" + timePosted +
                 ", postID=" + postID +
+                ", experiece=" + experience +
+                ", lookingFor=" + lookingFor +
                 '}';
     }
 

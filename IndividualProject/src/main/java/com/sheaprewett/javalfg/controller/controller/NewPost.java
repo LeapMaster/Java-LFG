@@ -82,6 +82,8 @@ public class NewPost extends HttpServlet {
         String experience = request.getParameter("experience");
         // No validation needed, optional field
 
+        String lookingFor = request.getParameter("lookingFor");
+
         String description = request.getParameter("description");
         if (description.equals("")) {
             validForm = false;
@@ -104,6 +106,8 @@ public class NewPost extends HttpServlet {
             post.setGearRating(gearRating);
             post.setActivity(activity);
             post.setDescription(description);
+            post.setExperience(experience);
+            post.setLookingFor(lookingFor);
             java.util.Date utilDate = new java.util.Date();
             java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
             post.setTimePosted(sqlDate);
@@ -114,6 +118,9 @@ public class NewPost extends HttpServlet {
             }
 
             logger.log(Priority.INFO, post);
+            LFGPostDAO dao = new LFGPostDAO();
+            dao.save(post);
+
         } else {
 
         }
@@ -127,7 +134,7 @@ public class NewPost extends HttpServlet {
 
         }
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/results.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/testQuery");
         dispatcher.forward(request, response);
     }
 

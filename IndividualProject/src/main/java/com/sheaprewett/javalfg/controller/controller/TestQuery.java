@@ -37,4 +37,17 @@ public class TestQuery extends HttpServlet {
         dispatcher.forward(request, response);
     }
 
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        final Logger logger = Logger.getLogger(this.getClass());
+        logger.log(Priority.INFO, "TESTQUERYGET");
+        LFGPostDAO lfgDAO = new LFGPostDAO();
+        request.setAttribute("allPosts", lfgDAO.getAllLFGPosts());
+        System.out.println(lfgDAO.getAllLFGPosts());
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/results.jsp");
+        dispatcher.forward(request, response);
+    }
+
 }

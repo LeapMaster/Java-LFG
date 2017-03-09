@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.Priority;
+import org.hibernate.Transaction;
 
 /**
  * Created by student on 2/6/17.
@@ -47,12 +48,12 @@ public class LFGPostDAO {
      * @return id of the inserted lfg post
      */
 
-//    public int save(LFGPost lfgPost) {
-//        Session session = SessionFactoryProvider.getSessionFactory().openSession();
-//        Transaction transaction = session.beginTransaction();
-//        int id = (int)session.save(lfgPost);
-//        transaction.commit();
-//        return id;
-//    }
+    public void save(LFGPost lfgPost) {
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        session.save(lfgPost);
+        transaction.commit();
+
+    }
 
 }

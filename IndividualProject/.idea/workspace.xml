@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a01ec72-b1c5-4f38-9406-7745c30a1d64" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/styles/header.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sheaprewett/javalfg/controller/controller/NewPost.class" afterPath="$PROJECT_DIR$/target/classes/com/sheaprewett/javalfg/controller/controller/NewPost.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sheaprewett/javalfg/controller/controller/TestQuery.class" afterPath="$PROJECT_DIR$/target/classes/com/sheaprewett/javalfg/controller/controller/TestQuery.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sheaprewett/javalfg/controller/entity/LFGPost.class" afterPath="$PROJECT_DIR$/target/classes/com/sheaprewett/javalfg/controller/entity/LFGPost.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sheaprewett/javalfg/controller/persistence/LFGPostDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/sheaprewett/javalfg/controller/persistence/LFGPostDAO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/individualproject.war" afterPath="$PROJECT_DIR$/target/individualproject.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/individualproject/WEB-INF/classes/com/sheaprewett/javalfg/controller/controller/NewPost.class" afterPath="$PROJECT_DIR$/target/individualproject/WEB-INF/classes/com/sheaprewett/javalfg/controller/controller/NewPost.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/individualproject/WEB-INF/classes/com/sheaprewett/javalfg/controller/controller/TestQuery.class" afterPath="$PROJECT_DIR$/target/individualproject/WEB-INF/classes/com/sheaprewett/javalfg/controller/controller/TestQuery.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/individualproject/WEB-INF/classes/com/sheaprewett/javalfg/controller/entity/LFGPost.class" afterPath="$PROJECT_DIR$/target/individualproject/WEB-INF/classes/com/sheaprewett/javalfg/controller/entity/LFGPost.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/individualproject/WEB-INF/classes/com/sheaprewett/javalfg/controller/persistence/LFGPostDAO.class" afterPath="$PROJECT_DIR$/target/individualproject/WEB-INF/classes/com/sheaprewett/javalfg/controller/persistence/LFGPostDAO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -18,16 +14,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/controller/TestQuery.java" afterPath="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/controller/TestQuery.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/entity/LFGPost.java" afterPath="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/entity/LFGPost.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/persistence/LFGPostDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/persistence/LFGPostDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/header-content.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/header-content.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/results.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/results.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/styles/index.css" afterPath="$PROJECT_DIR$/src/main/webapp/styles/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/individualproject/index.jsp" afterPath="$PROJECT_DIR$/target/individualproject/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/individualproject/jsp/header-content.jsp" afterPath="$PROJECT_DIR$/target/individualproject/jsp/header-content.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/individualproject/styles/index.css" afterPath="$PROJECT_DIR$/target/individualproject/styles/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/styles/postPage.css" afterPath="$PROJECT_DIR$/src/main/webapp/styles/postPage.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/individualproject/results.jsp" afterPath="$PROJECT_DIR$/target/individualproject/results.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -60,8 +50,8 @@
       <file leaf-file-name="LFGPost.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/entity/LFGPost.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="126" column="0" lean-forward="true" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+            <state relative-caret-position="213">
+              <caret line="168" column="29" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,17 +63,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="109" column="64" lean-forward="false" selection-start-line="109" selection-start-column="54" selection-end-line="109" selection-end-column="64" />
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -102,8 +82,18 @@
       <file leaf-file-name="results.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/results.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="60" column="42" lean-forward="true" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
+            <state relative-caret-position="315">
+              <caret line="36" column="46" lean-forward="true" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="postPage.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/styles/postPage.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -112,18 +102,8 @@
       <file leaf-file-name="NewPost.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/controller/NewPost.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestQuery.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/controller/TestQuery.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="64" />
+            <state relative-caret-position="258">
+              <caret line="122" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,14 +111,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LFGPostDAO.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestQuery.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/controller/TestQuery.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LFGPostDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/persistence/LFGPostDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="64" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="64" />
+            <state relative-caret-position="258">
+              <caret line="39" column="18" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding>
-                <marker date="1488944784540" expanded="true" signature="64:196" ph="..." />
+                <element signature="imports" expanded="true" />
+                <marker date="1489026368171" expanded="true" signature="64:196" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SessionFactoryProvider.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/persistence/SessionFactoryProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="18" column="20" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -146,8 +149,8 @@
       <file leaf-file-name="header-content.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/header-content.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="48" />
+            <state relative-caret-position="195">
+              <caret line="13" column="58" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -173,6 +176,7 @@
       <find>form</find>
       <find>experience</find>
       <find>exper</find>
+      <find>lookingFor</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -194,23 +198,23 @@
         <option value="$PROJECT_DIR$/src/main/java/controller/TestQuery.java" />
         <option value="$PROJECT_DIR$/src/test/java/persistence/LFGDAOTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/sheaprewett/javalfg/controller/persistence/LFGDAOTest.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/styles/postPage.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/loginerror.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/sheaprewett/javalfg/controller/persistence/LFGPostDAOTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/results.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/controller/NewPost.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/styles/header.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/header-content.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/styles/index.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/controller/TestQuery.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/persistence/LFGPostDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/entity/LFGPost.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/sheaprewett/javalfg/controller/persistence/LFGPostDAOTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/persistence/LFGPostDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/controller/NewPost.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/controller/TestQuery.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/styles/postPage.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/results.jsp" />
       </list>
     </option>
   </component>
@@ -263,10 +267,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="57" />
-    <option name="y" value="24" />
-    <option name="width" value="1863" />
-    <option name="height" value="1056" />
+    <option name="x" value="988" />
+    <option name="y" value="52" />
+    <option name="width" value="932" />
+    <option name="height" value="1028" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -284,7 +288,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -308,6 +312,18 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="persistence" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -526,7 +542,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1154,6 +1170,7 @@
       <workItem from="1488911430056" duration="5805000" />
       <workItem from="1488924706157" duration="13350000" />
       <workItem from="1488942369218" duration="3478000" />
+      <workItem from="1489023826218" duration="6215000" />
     </task>
     <servers />
   </component>
@@ -1190,16 +1207,16 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69062000" />
+    <option name="totallyTimeSpent" value="75277000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="24" width="1863" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="988" y="52" width="932" height="1028" extended-state="4" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18436985" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37810385" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1215,10 +1232,10 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.282881" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29139784" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23995598" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49774265" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1248,13 +1265,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/persistence/LFGPostDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="22" column="21" lean-forward="false" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/persistence/SessionFactoryProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1481,13 +1491,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/sheaprewett/javalfg/controller/persistence/LFGPostDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1532,26 +1535,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/header-content.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="48" />
+        <state relative-caret-position="1635">
+          <caret line="109" column="64" lean-forward="false" selection-start-line="109" selection-start-column="54" selection-end-line="109" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/styles/postPage.css">
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-web-api/7.0/javaee-web-api-7.0.jar!/javax/servlet/ServletRequest.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        <state relative-caret-position="309">
+          <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/persistence/SessionFactoryProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/sheaprewett/javalfg/controller/persistence/LFGPostDAOTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="32" column="1" lean-forward="false" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+        <state relative-caret-position="270">
+          <caret line="24" column="46" lean-forward="false" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/controller/TestQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1564,52 +1585,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/controller/NewPost.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/header-content.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="33" />
+        <state relative-caret-position="195">
+          <caret line="13" column="58" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/controller/TestQuery.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/styles/postPage.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/results.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="60" column="42" lean-forward="true" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
+        <state relative-caret-position="315">
+          <caret line="36" column="46" lean-forward="true" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/controller/NewPost.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="109" column="64" lean-forward="false" selection-start-line="109" selection-start-column="54" selection-end-line="109" selection-end-column="64" />
-          <folding />
+        <state relative-caret-position="258">
+          <caret line="122" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/entity/LFGPost.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="126" column="0" lean-forward="true" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+        <state relative-caret-position="213">
+          <caret line="168" column="29" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1618,11 +1631,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/persistence/LFGPostDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="64" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="64" />
+        <state relative-caret-position="258">
+          <caret line="39" column="18" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding>
-            <marker date="1488944784540" expanded="true" signature="64:196" ph="..." />
+            <element signature="imports" expanded="true" />
+            <marker date="1489026368171" expanded="true" signature="64:196" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/persistence/SessionFactoryProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="18" column="20" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
