@@ -2,6 +2,7 @@ package com.sheaprewett.javalfg.controller.controller;
 
 import com.sheaprewett.javalfg.controller.persistence.LFGPostDAO;
 import org.apache.log4j.Logger;
+import org.apache.log4j.Priority;
 
 
 import javax.servlet.RequestDispatcher;
@@ -27,7 +28,7 @@ public class TestQuery extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         final Logger logger = Logger.getLogger(this.getClass());
-
+        logger.log(Priority.INFO, "TESTQUERYGET");
         LFGPostDAO lfgDAO = new LFGPostDAO();
         request.setAttribute("allPosts", lfgDAO.getAllLFGPosts());
         System.out.println(lfgDAO.getAllLFGPosts());
@@ -35,4 +36,5 @@ public class TestQuery extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher("/results.jsp");
         dispatcher.forward(request, response);
     }
+
 }

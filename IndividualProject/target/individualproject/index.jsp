@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <script src="js/jquery-3.1.1.min.js" charset="utf-8"></script>
     <script src="js/bootstrap.min.js" charset="utf-8"></script>
-
+    <link rel="stylesheet" href="styles/index.css">
 
 </head>
 <body>
@@ -23,90 +23,115 @@
             <div id="collapse1" class="panel-collapse collapse in">
                 <div class="panel-body">
                     <div>
-                        <form action="/newPost" methodd="post">
-                            <table>
+                        <form action="newPost" method="post">
+                            <table class="table formTable">
                                 <tr>
                                     <td colspan="4">
 
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
+                                    <td colspan="2" class="col2">
                                         Platform<br />
-                                        <input type="text">
+                                        <select name="platform" class="form-control">
+                                            <option value="none">-Pick a Class-</option>
+                                            <option value="Xbox">Xbox</option>
+                                            <option value="Playstation">Playstation</option>
+                                            <option value="PC">PC</option>
+
+                                        </select>
 
                                     </td>
-                                    <td colspan="2">
+                                    <td colspan="2" class="col2">
                                         Username<br />
-                                        <input type="text">
+                                        <input type="text" name="username" class="textField">
 
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
+                                    <td colspan="2" class="col2">
                                         Region<br />
-                                        <input type="text">
+                                        <select name="region" class="form-control">
+                                            <option value="none">-Choose a Region-</option>
+                                            <option value="North America">North America</option>
+                                            <option value="Europe">Europe</option>
+                                            <option value="Asia">Asia</option>
+                                        </select>
 
                                     </td>
-                                    <td colspan="2">
+                                    <td colspan="2" class="col2">
                                         Looking For<br />
-                                        <input type="text">
+                                        <select name="lookingFor" class="form-control">
+                                            <option value="none">-Choose Looking For-</option>
+                                            <option value="LFG">Looking for Group</option>
+                                            <option value="LFM">Looking for More</option>
 
+                                        </select>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
-                                        <select>
+                                    <td colspan="2" class="col2">
+                                        Player Class<br />
+                                        <select name="playerClass" class="form-control">
                                             <option value="none">Pick a Class</option>
-                                            <option value="tank">Tank</option>
-                                            <option value="healer">Healer</option>
-                                            <option value="dps">DPS</option>
+                                            <option value="Tank">Tank</option>
+                                            <option value="Healer">Healer</option>
+                                            <option value="DPS">DPS</option>
 
                                         </select>
 
                                     </td>
                                     <td>
                                         Level<br />
-                                        <input type="number" class="numberInput">
+                                        <input type="number" class="numberInput, textField" name="level" value="0">
 
                                     </td>
                                     <td>
                                         Gear Rating<br />
-                                        <input type="number" class="numberInput">
+                                        <input type="number" class="numberInput, textField" name="gearRating" value="0">
 
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
-                                        <select>
+                                    <td colspan="2" class="col2">
+                                        Activity<br />
+                                        <select name="activity" class="form-control">
                                             <option value="none">Pick an Activity</option>
-                                            <option value="vaultofglass">Vault of Glass</option>
-                                            <option value="crystaltower">Healer</option>
-                                            <option value="undercover">Undercover</option>
+                                            <option value="Vault Of Glass">Vault of Glass</option>
+                                            <option value="Crystal Tower">Crystal Tower</option>
+                                            <option value="Undercover">Undercover</option>
                                         </select>
 
                                     </td>
-                                    <td colspan="2">
+                                    <td colspan="2" class="col2">
                                         Experience (Optional) <br />
-                                        <input type="button" value="Novice"/>
-                                        <input type="button" value="Sherpa"/>
+                                        <!--<input type="button" value="Novice"/>
+                                        <input type="button" value="Sherpa"/>-->
+                                        <select name="experience" class="form-control">
+                                            <option value=""></option>
+                                            <option value="Sherpa">Sherpa</option>
+                                            <option value="Beginner">Beginner</option>
+
+                                        </select>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="4">
+                                    <td colspan="4" class="col4">
                                         Description<br />
-                                        <input type="text" />
+                                        <input type="text" name="description" class="descriptionInput"/>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
-                                        <input type="button" value="I have a mic" />
+                                    <td colspan="2" class="col2">
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" name="haveMic" value="true">I have a mic</label>
+                                        </div>
                                     </td>
                                     <td>
-                                        <input type="button" value="Submit" />
+                                        <input type="submit" name="submit" value="Submit" />
                                     </td>
                                     <td>
-                                        <input type="button" value="Clear" />
+                                        <input type="reset" name="reset" value="Clear" />
                                     </td>
                                 </tr>
                             </table>

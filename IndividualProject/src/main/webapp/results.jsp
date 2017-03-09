@@ -24,7 +24,7 @@
             <br/>${currentPost}<br/>
             <tr>
                 <td>
-                    ${currentPost.platforms}
+                    ${currentPost.platform}
                 </td>
                 <td>
                     ${currentPost.username}<br/>

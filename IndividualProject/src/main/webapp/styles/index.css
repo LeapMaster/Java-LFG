@@ -1,23 +1,19 @@
-ul.navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+.col2 {
+    width: 50%;
+}
+.col4 {
+    width:100%;
 }
 
-li.navitem {
-    float: left;
+.descriptionInput {
+    width:100%;
 }
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+.formTable {
+    width: 1000px;
+    margin: auto;
 }
 
-li a:hover {
-    background-color: #111;
+.textField {
+    width: 230px;
 }

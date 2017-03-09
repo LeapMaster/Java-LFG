@@ -6,19 +6,26 @@ import org.hibernate.Session;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.Priority;
+
 /**
  * Created by student on 2/6/17.
  */
 public class LFGPostDAO {
 
+    final Logger logger = Logger.getLogger(this.getClass());
     /** Return a list of all posts
      *
      * @return All posts
      */
     public List<LFGPost> getAllLFGPosts() {
         List<LFGPost> lfgPosts = new ArrayList<LFGPost>();
+        logger.log(Priority.INFO, "Created List");
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        logger.log(Priority.INFO, "Opened session");
         lfgPosts = session.createCriteria(LFGPost.class).list();
+        logger.log(Priority.INFO, "Created criteria");
         return lfgPosts;
     }
 

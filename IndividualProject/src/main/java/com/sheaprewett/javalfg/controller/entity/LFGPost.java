@@ -21,7 +21,6 @@ public class LFGPost {
 
     @Column(name = "region")
     private String region;
-    //private Enumeration lookingFor;
 
     @Column(name = "player_class")
     private String playerClass;
@@ -34,7 +33,14 @@ public class LFGPost {
 
     @Column(name = "activity")
     private String activity;
-    //private Enumeration experience;
+
+
+
+    @Column(name = "experience")
+    private String experience;
+
+    @Column(name = "looking_for")
+    private String lookingFor;
 
     @Column(name = "description")
     private String description;
@@ -75,14 +81,6 @@ public class LFGPost {
         this.region = region;
     }
 
-//    public Enumeration getLookingFor() {
-//        return lookingFor;
-//    }
-//
-//    public void setLookingFor(Enumeration lookingFor) {
-//        this.lookingFor = lookingFor;
-//    }
-
     public String getPlayerClass() {
         return playerClass;
     }
@@ -115,14 +113,6 @@ public class LFGPost {
         this.activity = activity;
     }
 
-//    public Enumeration getExperience() {
-//        return experience;
-//    }
-//
-//    public void setExperience(Enumeration experience) {
-//        this.experience = experience;
-//    }
-
     public String getDescription() {
         return description;
     }
@@ -153,6 +143,22 @@ public class LFGPost {
 
     public void setPostID(int postID) {
         this.postID = postID;
+    }
+
+    public String getExperience() {
+        return experience;
+    }
+
+    public void setExperience(String experience) {
+        this.experience = experience;
+    }
+
+    public String getLookingFor() {
+        return lookingFor;
+    }
+
+    public void setLookingFor(String lookingFor) {
+        this.lookingFor = lookingFor;
     }
 
 
