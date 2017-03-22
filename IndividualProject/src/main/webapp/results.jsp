@@ -18,7 +18,7 @@
     <%@include file="jsp/header-content.jsp"%>
     <h2>All Posts</h2>
     <%--${allPosts}<br/>--%>
-    Array Size: ${allPosts.size()}<br/>
+    Posts Found: ${allPosts.size()}<br/>
     <table class="table">
         <c:forEach var="currentPost" items="${allPosts}">
             <%--<br/>${currentPost}<br/>--%>

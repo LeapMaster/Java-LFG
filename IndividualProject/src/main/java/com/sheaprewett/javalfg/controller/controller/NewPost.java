@@ -33,7 +33,6 @@ public class NewPost extends HttpServlet {
         ArrayList<String> errorFields = new ArrayList<String>();
         boolean validForm = true;
 
-
         final Logger logger = Logger.getLogger(this.getClass());
         logger.log(Priority.INFO, "NEWPOST");
 
@@ -129,13 +128,18 @@ public class NewPost extends HttpServlet {
         if (validForm) {
             //Set page parameter for success message
 
+
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/testQuery");
+            dispatcher.forward(request, response);
+
         } else {
             //Set page parameters to highlight incomplete fields
-
+            request.setAttribute("error", true);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
+            dispatcher.forward(request, response);
         }
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/testQuery");
-        dispatcher.forward(request, response);
+
     }
 
 }

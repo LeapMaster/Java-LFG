@@ -29,3 +29,10 @@
 -2 Hours getting a demo up on AWS
 -3 Hours going through activities on REST
 -1 Hour setting up a quick REST Demo for Group Project 
+
+###Week 8
+-1 Hour making some tweaks to REST Demo being used as baseline for Group Project
+-10 Hours working on Individual Project (formatting CSS, implementing functionality, debugging)
+
+###Week 9
+-1 Hour working on code review

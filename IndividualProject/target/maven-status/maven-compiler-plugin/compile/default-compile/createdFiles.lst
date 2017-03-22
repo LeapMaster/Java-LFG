@@ -3,3 +3,4 @@ com/sheaprewett/javalfg/controller/persistence/SessionFactoryProvider.class
 com/sheaprewett/javalfg/controller/persistence/LFGPostDAO.class
 com/sheaprewett/javalfg/controller/entity/LFGPost.class
 com/sheaprewett/javalfg/controller/controller/TestQuery.class
+com/sheaprewett/javalfg/controller/controller/RunSearch.class
