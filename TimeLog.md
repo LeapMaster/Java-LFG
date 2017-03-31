@@ -36,3 +36,8 @@
 
 ###Week 9
 -1 Hour working on code review
+-2 Hours working on Team Project
+
+###Week 10
+-4 Hours working on Team Project
+-3 Hours working on Individual Project
