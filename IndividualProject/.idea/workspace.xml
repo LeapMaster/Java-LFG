@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a01ec72-b1c5-4f38-9406-7745c30a1d64" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/controller/RunSearch.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sheaprewett/javalfg/controller/controller/NewPost.class" afterPath="$PROJECT_DIR$/target/classes/com/sheaprewett/javalfg/controller/controller/NewPost.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sheaprewett/javalfg/controller/persistence/LFGPostDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/sheaprewett/javalfg/controller/persistence/LFGPostDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/individualproject.war" afterPath="$PROJECT_DIR$/target/individualproject.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/individualproject/WEB-INF/classes/com/sheaprewett/javalfg/controller/controller/NewPost.class" afterPath="$PROJECT_DIR$/target/individualproject/WEB-INF/classes/com/sheaprewett/javalfg/controller/controller/NewPost.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/individualproject/WEB-INF/classes/com/sheaprewett/javalfg/controller/persistence/LFGPostDAO.class" afterPath="$PROJECT_DIR$/target/individualproject/WEB-INF/classes/com/sheaprewett/javalfg/controller/persistence/LFGPostDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/sheaprewett/javalfg/controller/persistence/LFGPostDAOTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/sheaprewett/javalfg/controller/persistence/LFGPostDAOTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/controller/NewPost.java" afterPath="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/controller/NewPost.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/persistence/LFGPostDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/persistence/LFGPostDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/header-content.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/header-content.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/results.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/results.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/individualproject/index.jsp" afterPath="$PROJECT_DIR$/target/individualproject/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/individualproject/jsp/header-content.jsp" afterPath="$PROJECT_DIR$/target/individualproject/jsp/header-content.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/individualproject/results.jsp" afterPath="$PROJECT_DIR$/target/individualproject/results.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -129,7 +111,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1065">
               <caret line="87" column="9" lean-forward="false" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#992#1008#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -141,29 +126,30 @@
               <caret line="48" column="6" lean-forward="false" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="false" />
+                <element signature="e#935#943#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
+            <state relative-caret-position="3000">
               <caret line="200" column="131" lean-forward="false" selection-start-line="200" selection-start-column="131" selection-end-line="200" selection-end-column="131" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LFGPostDAO.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LFGPostDAO.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/persistence/LFGPostDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+            <state relative-caret-position="105">
+              <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#802#811#0" expanded="false" />
+                <element signature="e#802#811#0" expanded="true" />
+                <element signature="e#1615#1624#0" expanded="true" />
                 <marker date="1490064466740" expanded="true" signature="64:280" ph="..." />
               </folding>
             </state>
@@ -328,8 +314,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="57" />
     <option name="y" value="24" />
-    <option name="width" value="1859" />
-    <option name="height" value="904" />
+    <option name="width" value="1863" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -347,7 +333,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -570,8 +556,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1205,6 +1191,8 @@
       <workItem from="1489084418518" duration="1942000" />
       <workItem from="1490055648899" duration="9314000" />
       <workItem from="1490144381878" duration="181000" />
+      <workItem from="1490898603670" duration="652000" />
+      <workItem from="1490913587829" duration="84000" />
     </task>
     <servers />
   </component>
@@ -1241,16 +1229,16 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92022000" />
+    <option name="totallyTimeSpent" value="92758000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="24" width="1859" height="904" extended-state="6" />
-    <editor active="false" />
+    <frame x="57" y="24" width="1863" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10259239" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10236654" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1269,7 +1257,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29123172" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25758412" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26252064" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1821,6 +1809,7 @@
           <caret line="48" column="6" lean-forward="false" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="false" />
+            <element signature="e#935#943#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1829,27 +1818,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1065">
           <caret line="87" column="9" lean-forward="false" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#992#1008#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="3000">
           <caret line="200" column="131" lean-forward="false" selection-start-line="200" selection-start-column="131" selection-end-line="200" selection-end-column="131" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/persistence/LFGPostDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#802#811#0" expanded="false" />
-            <marker date="1490064466740" expanded="true" signature="64:280" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1886,6 +1866,18 @@
         <state relative-caret-position="765">
           <caret line="51" column="17" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="51" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/persistence/LFGPostDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding>
+            <element signature="e#802#811#0" expanded="true" />
+            <element signature="e#1615#1624#0" expanded="true" />
+            <marker date="1490064466740" expanded="true" signature="64:280" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
