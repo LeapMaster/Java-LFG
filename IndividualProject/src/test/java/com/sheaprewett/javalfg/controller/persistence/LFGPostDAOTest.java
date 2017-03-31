@@ -1,6 +1,6 @@
-package com.sheaprewett.javalfg.controller.persistence;
+package com.sheaprewett.javalfg.persistence;
 
-import com.sheaprewett.javalfg.controller.entity.LFGPost;
+import com.sheaprewett.javalfg.entity.LFGPost;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,23 +13,23 @@ import static org.junit.Assert.*;
  */
 public class LFGPostDAOTest {
 
-//    LFGPostDAO dao;
-//
-//    @Before
-//    public void setup() {
-//        dao = new LFGPostDAO();
-//    }
-//
-//    @Test
-//    public void getAllLFGPosts() throws Exception {
-//        List<LFGPost> users = dao.getAllLFGPosts();
-//        assertTrue(users.size() > 0);
-//    }
-//
-//    @Test
-//    public void getLFGPost() throws Exception {
-//        LFGPost post = dao.getLFGPost(1);
-//        assertEquals(post.getPostID(), 1);
-//    }
+    LFGPostDAO dao;
+
+    @Before
+    public void setup() {
+        dao = new LFGPostDAO();
+    }
+
+    @Test
+    public void getAllLFGPosts() throws Exception {
+        List<LFGPost> users = dao.getAllLFGPosts();
+        assertTrue(users.size() > 0);
+    }
+
+    @Test
+    public void getLFGPost() throws Exception {
+        LFGPost post = dao.getLFGPost(1);
+        assertEquals(post.getPostID(), 1);
+    }
 
 }

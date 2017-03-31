@@ -1,6 +1,7 @@
-com/sheaprewett/javalfg/controller/controller/NewPost.class
-com/sheaprewett/javalfg/controller/persistence/SessionFactoryProvider.class
-com/sheaprewett/javalfg/controller/persistence/LFGPostDAO.class
-com/sheaprewett/javalfg/controller/entity/LFGPost.class
-com/sheaprewett/javalfg/controller/controller/TestQuery.class
-com/sheaprewett/javalfg/controller/controller/RunSearch.class
+com/sheaprewett/javalfg/persistence/SessionFactoryProvider.class
+com/sheaprewett/javalfg/entity/LFGPost.class
+com/sheaprewett/javalfg/controller/IndexServlet.class
+com/sheaprewett/javalfg/controller/TestQuery.class
+com/sheaprewett/javalfg/persistence/LFGPostDAO.class
+com/sheaprewett/javalfg/controller/NewPost.class
+com/sheaprewett/javalfg/controller/RunSearch.class
