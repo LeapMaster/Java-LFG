@@ -120,24 +120,17 @@ public class NewPost extends HttpServlet {
             LFGPostDAO dao = new LFGPostDAO();
             dao.save(post);
 
-        } else {
-
-        }
-
-
-        if (validForm) {
-            //Set page parameter for success message
-
-
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/testQuery");
-            dispatcher.forward(request, response);
+//            RequestDispatcher dispatcher = request.getRequestDispatcher("/home");
+//            dispatcher.forward(request, response);
+            response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + "/"));
 
         } else {
             //Set page parameters to highlight incomplete fields
             request.setAttribute("error", true);
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/");
             dispatcher.forward(request, response);
         }
+
 
 
     }

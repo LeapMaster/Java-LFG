@@ -1,7 +1,11 @@
 /home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/persistence/LFGPostDAO.java
+/home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/controller/RegisterServlet.java
 /home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/controller/NewPost.java
+/home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/controller/APITests.java
 /home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/controller/IndexServlet.java
 /home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/controller/RunSearch.java
 /home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/entity/LFGPost.java
+/home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/persistence/UserDAO.java
+/home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/entity/User.java
 /home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/controller/TestQuery.java
 /home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/persistence/SessionFactoryProvider.java

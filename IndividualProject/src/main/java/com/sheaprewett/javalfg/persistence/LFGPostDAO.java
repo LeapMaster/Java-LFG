@@ -27,6 +27,7 @@ public class LFGPostDAO {
      * @return All posts
      */
     public List<LFGPost> getAllLFGPosts() {
+
         List<LFGPost> lfgPosts = new ArrayList<LFGPost>();
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
@@ -71,6 +72,9 @@ public class LFGPostDAO {
                 logger.log(Priority.INFO, "+" + value + "+");
 //                Integer minimum = Integer.parseInt("70");
                 Criterion currentCriterion = Restrictions.ge(key, Integer.parseInt(value));
+                filter.add(currentCriterion);
+            } else if (key.equals("haveMic")) {
+                Criterion currentCriterion = Restrictions.ge(key, true);
                 filter.add(currentCriterion);
             } else {
                 Criterion currentCriterion = Restrictions.eq(key, value);

@@ -13,7 +13,7 @@
 <ul class="navbar">
     <li class="navitem"><img src="img/lfgLogoSmall.png" /></li>
     <li class="navitem"><a class="active" href=${pageContext.request.contextPath}>Home</a></li>
-    <li class="navitem"><a href="#news">Register (Not Implemented)</a></li>
+    <li class="navitem"><a href="${pageContext.request.contextPath}/register.jsp">Register</a></li>
     <li class="navitem"><a href="#contact">Login (Not Implemented)</a></li>
     <%--<li class="navitem"><a href="#about">Full</a></li>--%>
 </ul>

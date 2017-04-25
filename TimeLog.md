@@ -41,3 +41,13 @@
 ###Week 10
 -4 Hours working on Team Project
 -3 Hours working on Individual Project
+
+###Week 11
+-8 Hours working on Team Project
+
+###Week 12
+-18 Hours working on Team Project
+
+###Week 13
+-2 Hours working on week 13 exercise
+-3 Hours working on Individual Project
