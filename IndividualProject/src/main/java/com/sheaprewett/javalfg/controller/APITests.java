@@ -19,7 +19,9 @@ public class APITests {
         String apiKey = "6951b9e994824aa0b7c7d828bd435bee";
 
         // Endpoint for Gjallarhorn
-        String url = " http://www.bungie.net/Platform/Destiny/254/Account/58396/Summary/";
+        String realm = "Kil'Jaeden";
+        String username="Salsten";
+        String url = "https://us.api.battle.net/wow/character/" + realm + "/" + username + "?fields=items&locale=en_US&apikey=fx4memxf63y6jvddy89aht9psncrderp";
         //String url = "https://www.bungie.net/Platform/Destiny/Manifest/InventoryItem/1274330687/";
 
         URL obj;
@@ -29,7 +31,7 @@ public class APITests {
             con = (HttpURLConnection) obj.openConnection();
             con.setRequestMethod("GET");
             // Set header
-            con.setRequestProperty("X-API-KEY", apiKey);
+//            con.setRequestProperty("X-API-KEY", apiKey);
             int responseCode = con.getResponseCode();
             System.out.println("\nSending 'GET' request to Bungie.Net : " + url);
             System.out.println("Response Code : " + responseCode);
@@ -46,8 +48,10 @@ public class APITests {
             JsonParser parser = new JsonParser();
             JsonObject json = (JsonObject) parser.parse(response);
 
-            System.out.println();
-            System.out.println(json.getAsJsonObject("Response").getAsJsonObject("data").getAsJsonObject("inventoryItem").get("itemName"));
+            System.out.println(json);
+            System.out.println(json.get("name"));
+            System.out.println(json.get("level"));
+            System.out.println(json.getAsJsonObject("items").get("averageItemLevel"));
             //Gjallarhorn
         } catch (MalformedURLException e) {
             e.printStackTrace();

@@ -16,13 +16,13 @@
         <div id="collapse1" class="panel-collapse collapse">
             <div class="panel-body">
                 <div>
-                    <form action="newPost" method="post">
-                        <table class="table formTable">
+                    <form action="newPost" method="post" id="newListingForm">
+                        <table class="table formTable" >
                             <tr>
                                 <td colspan="2" class="col2">
                                     Platform<br />
-                                    <select name="platform" class="form-control">
-                                        <option value="none">-Choose a Platform-</option>
+                                    <select name="platform" class="form-control" required>
+                                        <option value="">-Choose a Platform-</option>
                                         <option value="Xbox">Xbox</option>
                                         <option value="Playstation">Playstation</option>
                                         <option value="PC">PC</option>
@@ -32,15 +32,15 @@
                                 </td>
                                 <td colspan="2" class="col2">
                                     Username<br />
-                                    <input type="text" name="username" class="textField">
+                                    <input type="text" name="username" class="textField" required>
 
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="2" class="col2">
                                     Region<br />
-                                    <select name="region" class="form-control">
-                                        <option value="none">-Choose a Region-</option>
+                                    <select name="region" class="form-control" required>
+                                        <option value="">-Choose a Region-</option>
                                         <option value="North America">North America</option>
                                         <option value="Europe">Europe</option>
                                         <option value="Asia">Asia</option>
@@ -49,8 +49,8 @@
                                 </td>
                                 <td colspan="2" class="col2">
                                     Looking For<br />
-                                    <select name="lookingFor" class="form-control">
-                                        <option value="none">-Choose Looking For-</option>
+                                    <select name="lookingFor" class="form-control" required>
+                                        <option value="">-Choose Looking For-</option>
                                         <option value="LFG">Looking for Group</option>
                                         <option value="LFM">Looking for More</option>
 
@@ -60,31 +60,43 @@
                             <tr>
                                 <td colspan="2" class="col2">
                                     Player Class<br />
-                                    <select name="playerClass" class="form-control">
-                                        <option value="none">Choose a Class</option>
+                                    <select name="playerClass" class="form-control" required>
+                                        <option value="">Choose a Class</option>
                                         <option value="Tank">Tank</option>
                                         <option value="Healer">Healer</option>
                                         <option value="DPS">DPS</option>
+                                        <option value="Warrior">Warrior</option>
+                                        <option value="Paladin">Paladin</option>
+                                        <option value="Hunter">Hunter</option>
+                                        <option value="Rogue">Rogue</option>
+                                        <option value="Priest">Priest</option>
+                                        <option value="Death Knight">Death Knight</option>
+                                        <option value="Shaman">Shaman</option>
+                                        <option value="Mage">Mage</option>
+                                        <option value="Warlock">Warlock</option>
+                                        <option value="Monk">Monk</option>
+                                        <option value="Druid">Druid</option>
+                                        <option value="Demon Hunter">Demon Hunter</option>
 
                                     </select>
 
                                 </td>
                                 <td>
                                     Level<br />
-                                    <input type="number" class="numberInput, textField" name="level" value="0">
+                                    <input type="number" class="numberInput, textField" name="level" value="" required>
 
                                 </td>
                                 <td>
-                                    Gear Rating<br />
-                                    <input type="number" class="numberInput, textField" name="gearRating" value="0">
+                                    Item Level<br />
+                                    <input type="number" class="numberInput, textField" name="gearRating" value="" required>
 
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="2" class="col2">
                                     Activity<br />
-                                    <select name="activity" class="form-control">
-                                        <option value="none">Choose an Activity</option>
+                                    <select name="activity" class="form-control" required>
+                                        <option value="">Choose an Activity</option>
                                         <option value="Vault Of Glass">Vault of Glass</option>
                                         <option value="Crystal Tower">Crystal Tower</option>
                                         <option value="Undercover">Undercover</option>
@@ -106,7 +118,7 @@
                             <tr>
                                 <td colspan="4" class="col4">
                                     Description<br />
-                                    <input type="text" name="description" class="descriptionInput"/>
+                                    <input type="text" name="description" class="descriptionInput" required/>
                                 </td>
                             </tr>
                             <tr>

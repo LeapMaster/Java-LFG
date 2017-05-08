@@ -36,7 +36,7 @@ public class RunSearch extends HttpServlet {
 
 
         final Logger logger = Logger.getLogger(this.getClass());
-        logger.log(Priority.INFO, "RUN SEARCH");
+        logger.info("RUN SEARCH");
 
         String platform = request.getParameter("platform");
 
@@ -113,7 +113,7 @@ public class RunSearch extends HttpServlet {
 //            errorFields.add("playerClass");
 //        }
 
-        logger.log(Priority.INFO, parameters);
+        logger.info(parameters);
         LFGPostDAO lfgDAO = new LFGPostDAO();
         List<LFGPost> lfgPosts = lfgDAO.filteredSearch(parameters);
         request.setAttribute("allPosts", lfgPosts);

@@ -16,8 +16,8 @@
         <div id="collapse2" class="panel-collapse collapse in">
             <div class="panel-body">
                 <div>
-                    <form action="home" method="post">
-                        <table class="table formTable">
+                    <form action="home" method="post" id="filteredSearchForm">
+                        <table class="table formTable" >
                             <tr>
                                 <td colspan="2" class="col2">
                                     Platform<br />
@@ -70,7 +70,7 @@
 
                                 </td>
                                 <td colspan="2">
-                                    Minimum Gear Rating<br />
+                                    Minimum Item Level<br />
                                     <input type="number" class="numberInput, textField" name="gearRating" value="" placeholder="Any">
                                 </td>
                             </tr>

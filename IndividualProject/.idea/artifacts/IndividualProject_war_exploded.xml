@@ -36,6 +36,7 @@
           <element id="library" level="project" name="Maven: org.glassfish.hk2.external:javax.inject:2.5.0-b05" />
           <element id="library" level="project" name="Maven: org.glassfish.hk2:hk2-locator:2.5.0-b05" />
           <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.8.0" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.5" />
         </element>
       </element>
       <element id="directory" name="META-INF">

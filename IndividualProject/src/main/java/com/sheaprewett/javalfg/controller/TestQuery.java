@@ -28,7 +28,7 @@ public class TestQuery extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         final Logger logger = Logger.getLogger(this.getClass());
-        logger.log(Priority.INFO, "TESTQUERYGET");
+        logger.info("TESTQUERYGET");
         LFGPostDAO lfgDAO = new LFGPostDAO();
         request.setAttribute("allPosts", lfgDAO.getAllLFGPosts());
 

@@ -67,9 +67,9 @@ public class LFGPostDAO {
             HashMap.Entry pair = (HashMap.Entry)iterator.next();
             String key = String.valueOf(pair.getKey());
             String value = String.valueOf(pair.getValue());
-            logger.log(Priority.INFO, key + " = " + value);
+//            logger.log(Priority.INFO, key + " = " + value);
             if (key.equals("level") || key.equals("gearRating")) {
-                logger.log(Priority.INFO, "+" + value + "+");
+//                logger.log(Priority.INFO, "+" + value + "+");
 //                Integer minimum = Integer.parseInt("70");
                 Criterion currentCriterion = Restrictions.ge(key, Integer.parseInt(value));
                 filter.add(currentCriterion);
@@ -85,7 +85,7 @@ public class LFGPostDAO {
             iterator.remove(); // avoids a ConcurrentModificationException
         }
         lfgPosts = filter.addOrder(Order.desc("id")).list();
-        logger.log(Priority.INFO, lfgPosts);
+//        logger.log(Priority.INFO, lfgPosts);
         return lfgPosts;
     }
 

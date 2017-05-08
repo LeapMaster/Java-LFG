@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -23,10 +24,13 @@ import java.util.List;
 )
 public class IndexServlet extends HttpServlet {
 
+    final Logger logger = Logger.getLogger(this.getClass());
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<LFGPost> lfgPosts = runInitialSearch(request, response);
         request.setAttribute("allPosts", lfgPosts);
+        request.setAttribute("UserMessage", getUserInfo(request));
         RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
         dispatcher.forward(request, response);
     }
@@ -35,7 +39,9 @@ public class IndexServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<LFGPost> lfgPosts = runFilteredSearch(request, response);
         request.setAttribute("allPosts", lfgPosts);
+        request.setAttribute("UserMessage", getUserInfo(request));
         RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
+
         dispatcher.forward(request, response);
     }
 
@@ -44,11 +50,11 @@ public class IndexServlet extends HttpServlet {
         HashMap<String, String> parameters = new HashMap<String, String>();
 
 
-        final Logger logger = Logger.getLogger(this.getClass());
-        logger.log(Priority.INFO, "RUN SEARCH");
+
+        logger.info("RUN SEARCH");
 
 
-        logger.log(Priority.INFO, parameters);
+        logger.info(parameters);
         LFGPostDAO lfgDAO = new LFGPostDAO();
         List<LFGPost> lfgPosts = lfgDAO.filteredSearch(parameters);
 
@@ -60,7 +66,7 @@ public class IndexServlet extends HttpServlet {
 
 
         final Logger logger = Logger.getLogger(this.getClass());
-        logger.log(Priority.INFO, "RUN SEARCH");
+        logger.info("RUN SEARCH");
 
         String platform = request.getParameter("platform");
 
@@ -137,10 +143,26 @@ public class IndexServlet extends HttpServlet {
 //            errorFields.add("playerClass");
 //        }
 
-        logger.log(Priority.INFO, parameters);
+        logger.info(parameters);
         LFGPostDAO lfgDAO = new LFGPostDAO();
         List<LFGPost> lfgPosts = lfgDAO.filteredSearch(parameters);
         return lfgPosts;
+    }
+
+    public String getUserInfo(HttpServletRequest request) {
+        HttpSession session=request.getSession(false);
+        String userMessage = "";
+        if (session != null) {
+            if (session.getAttribute("username") != null) {
+                userMessage = "Welcome back " + (String) session.getAttribute("username");
+                logger.info("WE GOT AN ATTRIBUTE! " + userMessage);
+            } else {
+                logger.info("NULL ATTRIBUTE");
+            }
+        } else {
+            logger.info("NULL SESSION");
+        }
+        return userMessage;
     }
 
 

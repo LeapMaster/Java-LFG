@@ -22,7 +22,7 @@ public class User {
     @GeneratedValue(generator="increment")
     @GenericGenerator(name="increment", strategy = "increment")
     @Column(name = "id")
-    private int postID;
+    private int userID;
 
     public String getUsername() {
         return username;
@@ -40,12 +40,12 @@ public class User {
         this.password = password;
     }
 
-    public int getPostID() {
-        return postID;
+    public int getUserID() {
+        return userID;
     }
 
-    public void setPostID(int postID) {
-        this.postID = postID;
+    public void getUserID(int postID) {
+        this.userID = postID;
     }
 
 

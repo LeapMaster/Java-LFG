@@ -9,11 +9,50 @@
     width:100%;
 }
 
+.descriptionOutputColumn{
+    /*min-width:1000px;*/
+    width:700px;
+    word-wrap:break-word;
+
+}
+
 .formTable {
     width: 1000px;
     margin: auto;
 }
 
+.listingTable {
+    /*table-layout: fixed;*/
+    width: 100%;
+
+}
+
 .textField {
     width: 230px;
+}
+
+.itemLevel {
+    color: purple;
+}
+
+#outputCol1 {
+    width:10%;
+
+}
+
+#outputCol2 {
+    width:10%;
+}
+
+#outputCol3 {
+    width:60%;
+    word-wrap:break-word;
+}
+
+#outputCol4 {
+    width:10%;
+}
+
+#outputCol5 {
+    width:10%;
 }

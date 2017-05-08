@@ -34,7 +34,7 @@ public class NewPost extends HttpServlet {
         boolean validForm = true;
 
         final Logger logger = Logger.getLogger(this.getClass());
-        logger.log(Priority.INFO, "NEWPOST");
+        logger.info("NEWPOST");
 
         String platform = request.getParameter("platform");
         if (platform.equals("none")) {
@@ -92,8 +92,8 @@ public class NewPost extends HttpServlet {
         String haveMic = request.getParameter("haveMic");
         // No validation required, always checked or unchecked
 
-        logger.log(Priority.INFO, "Valid Form: " + validForm);
-        logger.log(Priority.INFO, "Errors: " + errorFields);
+        logger.info("Valid Form: " + validForm);
+        logger.info("Errors: " + errorFields);
 
         if (validForm) {
             LFGPost post = new LFGPost();
@@ -116,7 +116,7 @@ public class NewPost extends HttpServlet {
                 post.setHaveMic(true);
             }
 
-            logger.log(Priority.INFO, post);
+            logger.info(post);
             LFGPostDAO dao = new LFGPostDAO();
             dao.save(post);
 
