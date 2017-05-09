@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a01ec72-b1c5-4f38-9406-7745c30a1d64" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_tanesha_recaptcha4j_recaptcha4j_0_0_7.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/individualproject.war" afterPath="$PROJECT_DIR$/target/individualproject.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/IndividualProject_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/IndividualProject_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IndividualProject.iml" afterPath="$PROJECT_DIR$/IndividualProject.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/NewPostServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/NewPostServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/newListing-content.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/newListing-content.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/sheaprewett/javalfg/persistence/LFGPostDAOTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/sheaprewett/javalfg/persistence/LFGPostDAOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/individualproject/index.jsp" afterPath="$PROJECT_DIR$/target/individualproject/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/IndexServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/IndexServlet.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -126,8 +115,18 @@
       <file leaf-file-name="LFGPostDAOTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/sheaprewett/javalfg/persistence/LFGPostDAOTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
+            <state relative-caret-position="460">
               <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="67" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/IndexServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="67" column="51" lean-forward="false" selection-start-line="67" selection-start-column="51" selection-end-line="67" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -138,16 +137,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="145">
               <caret line="102" column="7" lean-forward="true" selection-start-line="102" selection-start-column="7" selection-end-line="102" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="93" column="17" lean-forward="false" selection-start-line="93" selection-start-column="17" selection-end-line="93" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -266,7 +255,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config/properties.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/TestProperties.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/IndexServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/LoginServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/NewPost.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/ProfileServlet.java" />
@@ -279,6 +267,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/newListing-content.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/NewPostServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/IndexServlet.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/sheaprewett/javalfg/persistence/LFGPostDAOTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/sheaprewett/javalfg/persistence/UserDAOTest.java" />
       </list>
@@ -1342,7 +1331,7 @@
       <workItem from="1494331357408" duration="6616000" />
       <workItem from="1494342294901" duration="8058000" />
       <workItem from="1494351770909" duration="1402000" />
-      <workItem from="1494353945411" duration="5448000" />
+      <workItem from="1494353945411" duration="5834000" />
     </task>
     <servers />
   </component>
@@ -1379,7 +1368,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260545000" />
+    <option name="totallyTimeSpent" value="260931000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1863" height="1056" extended-state="6" />
@@ -1692,14 +1681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/IndexServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="97" column="19" lean-forward="false" selection-start-line="97" selection-start-column="15" selection-end-line="97" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/persistence/SessionFactoryProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1750,9 +1731,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sheaprewett/javalfg/controller/IndexServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="67" column="51" lean-forward="false" selection-start-line="67" selection-start-column="51" selection-end-line="67" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/sheaprewett/javalfg/persistence/LFGPostDAOTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
+        <state relative-caret-position="460">
           <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="67" selection-end-column="44" />
           <folding />
         </state>

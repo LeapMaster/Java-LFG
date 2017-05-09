@@ -66,7 +66,6 @@ public class IndexServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<LFGPost> lfgPosts = runFilteredSearch(request);
         request.setAttribute("allPosts", lfgPosts);
-        request.setAttribute("UserMessage", "Welcome back " + getLoggedUsername(request));
         RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
 
         dispatcher.forward(request, response);
