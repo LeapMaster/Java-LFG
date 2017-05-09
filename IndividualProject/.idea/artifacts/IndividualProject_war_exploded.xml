@@ -47,6 +47,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:3.0.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:3.0.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:3.0.5.RELEASE" />
+          <element id="library" level="project" name="Maven: net.tanesha.recaptcha4j:recaptcha4j:0.0.7" />
         </element>
       </element>
       <element id="directory" name="META-INF">

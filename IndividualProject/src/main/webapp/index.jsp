@@ -11,6 +11,7 @@
     <script src="js/bootstrap.min.js" charset="utf-8"></script>
     <script src="js/jquery.validate.js" charset="utf-8"></script>
     <script src="js/index.js" charset="utf-8"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 
 </head>
 <body>

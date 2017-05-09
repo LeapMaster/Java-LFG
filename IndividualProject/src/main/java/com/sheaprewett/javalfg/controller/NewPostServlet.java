@@ -1,7 +1,10 @@
 package com.sheaprewett.javalfg.controller;
 
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.sheaprewett.javalfg.entity.LFGPost;
 import com.sheaprewett.javalfg.persistence.LFGPostDAO;
+import net.tanesha.recaptcha.ReCaptchaImpl;
 import org.apache.log4j.Logger;
 import org.apache.log4j.Priority;
 
@@ -12,7 +15,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.*;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -42,12 +50,11 @@ public class NewPostServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         // Using servlet request, validate form and get LFGPost object if it's valid, bull if not
-        LFGPost post = validate(request);
+        LFGPost post = validateForm(request);
 
-
-        if (post != null) {
+        if (post != null && validateCaptcha(request)) {
             // Form validated, thus LFGPost object is not null (and vice versa)
-            logger.info(post);
+            logger.debug(post);
             LFGPostDAO dao = new LFGPostDAO();
             // Insert the new LFGPost
             dao.save(post);
@@ -61,7 +68,7 @@ public class NewPostServlet extends HttpServlet {
      * @param request the servlet request
      * @return Valid LFGPost with form data to insert, or null if invalid form
      */
-    public LFGPost validate(HttpServletRequest request) {
+    public LFGPost validateForm(HttpServletRequest request) {
         // Track field validity; to be flaged as false once a single field is invalid
         boolean validForm = true;
 
@@ -142,8 +149,48 @@ public class NewPostServlet extends HttpServlet {
         }
         // Return post object if validated form, or null if not
         return post;
+    }
 
+    public Boolean validateCaptcha(HttpServletRequest request) {
+        String captchaResponse = request.getParameter("g-recaptcha-response");
+        String secret = "6Ld8nSAUAAAAABb6yyvTTI8qfULDkIw2Z521dGhs";
+        String IP = request.getRemoteAddr();
+        // Endpoint for captcha API, with parameters in URL
+        String url = "https://www.google.com/recaptcha/api/siteverify?secret=" + secret + "&response=" + captchaResponse + "&remoteip=" + IP;
 
+        URL obj;
+        HttpURLConnection con;
+        try {
+            obj = new URL(url);
+            con = (HttpURLConnection) obj.openConnection();
+            con.setRequestMethod("GET");
+            //Send the request
+            int responseCode = con.getResponseCode();
+            logger.debug("Response Code : " + responseCode);
+            BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+            String inputLine;
+            String response = "";
+            // Build a string from the response data
+            while ((inputLine = in.readLine()) != null) {
+                response += inputLine;
+            }
+            in.close();
+
+            // Uses Gson - https://github.com/google/gson
+            JsonParser parser = new JsonParser();
+            JsonObject json = (JsonObject) parser.parse(response);
+            // Get whether the captcha validated or not
+            Boolean success = json.get("success").getAsBoolean();
+            System.out.println("Recaptcha: " + success);
+            return success;
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (java.io.IOException e) {
+            e.printStackTrace();
+        }
+        // If it reaches this point, something went wrong and it needs to return false
+        return false;
     }
 
 }

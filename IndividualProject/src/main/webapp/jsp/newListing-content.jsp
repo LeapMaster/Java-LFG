@@ -166,6 +166,14 @@
                                             <input type="reset" name="reset" value="Clear" />
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td colspan="2" class="col2">
+                                            <div class="g-recaptcha" data-sitekey="6Ld8nSAUAAAAAFuR7foXkCUlPLXG1OycvbPfi0eA"></div>
+                                        </td>
+                                        <td colspan="2" class="col2">
+
+                                        </td>
+                                    </tr>
                                 </table>
                             </form>
 
@@ -311,11 +319,18 @@
                                             </div>
                                         </td>
                                         <td>
-
                                             <input type="submit" name="submit" value="Submit" />
                                         </td>
                                         <td>
                                             <input type="reset" name="reset" value="Clear" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" class="col2">
+                                            <div class="g-recaptcha" data-sitekey="6Ld8nSAUAAAAAFuR7foXkCUlPLXG1OycvbPfi0eA"></div>
+                                        </td>
+                                        <td colspan="2" class="col2">
+
                                         </td>
                                     </tr>
                                 </table>

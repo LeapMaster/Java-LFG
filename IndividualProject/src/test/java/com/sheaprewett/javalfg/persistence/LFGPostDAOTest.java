@@ -32,8 +32,8 @@ public class LFGPostDAOTest {
 
     @Test
     public void getLFGPost() throws Exception {
-        LFGPost post = dao.getLFGPost(1);
-        assertEquals(post.getPostID(), 1);
+        LFGPost post = dao.getLFGPost(2);
+        assertEquals(post.getPostID(), 2);
     }
 
     @Test
