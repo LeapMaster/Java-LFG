@@ -1,4 +1,5 @@
 # Database Design
+Tables are unlinked to easily allow users to make posts anonymously.
 
 ## lfg_posts
 | Field       | Type         | Null | Key | Default | Extra          |
@@ -29,4 +30,3 @@
 | item_level | int(5)      | YES  |     | NULL    |       |
 
 
-Tables are unlinked to easily allow users to make posts anonymously.
