@@ -3,13 +3,29 @@
 ## Controller
 
 ### IndexServlet
-- Loads initial home page with query of latest posts. Will move NewPost and RunSearch to once they work.
+- Loads initial home page with query of latest posts.
+- Processes filtered search of posts
 
-### NewPost 
-- Takes parameters from form and uses LFGPostDAO to insert a new post.
+### LoginServlet
+- Processes user login and redirects according. Sets session attribute for logged user on success.
 
-### RunSearch
-- Takes parameters from form and runs a filtered search.
+### LogoutServlet
+- Invalidates session and redirects back home.
+
+### NewPostServlet
+- Processes new post insert, redirects back to home page
+
+### Profile Servlet
+- Loads data for logged in user, and allows users to change that data
+
+### PropertiesFileLoader
+- Can be instantiated anywhere in project to load the properties file
+
+## RegisterServlet
+- Processes registering a new User insert, redirects based on insert success.
+
+## RegistrationSuccess
+- Simply redirects to registration success page on successful registration.
 
 ## Entity
 
@@ -17,7 +33,7 @@
 - Object to store data for LFG ticker posts.
 
 ### User
-- Object to store data for Users
+- Object to store data for Users and their character data
 
 ## Persistence
 
