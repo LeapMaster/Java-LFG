@@ -43,8 +43,6 @@ public class UserDAO {
             return users.get(0);
         }
         return null;
-
-
     }
 
 
@@ -88,10 +86,7 @@ public class UserDAO {
             transaction.commit();
             session.flush();
             session.close();
-
         }
-
-
         return "";
     }
 

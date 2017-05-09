@@ -1,25 +1,26 @@
 package com.sheaprewett.javalfg.persistence;
 
+import com.sheaprewett.javalfg.controller.PropertiesFileLoader;
 import com.sheaprewett.javalfg.entity.LFGPost;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.Priority;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 
 /**
  * Created by student on 2/6/17.
  */
 public class LFGPostDAO {
+
+    Properties properties = new PropertiesFileLoader().loadProperties();
 
     final Logger logger = Logger.getLogger(this.getClass());
     /** Return a list of all posts
@@ -47,7 +48,6 @@ public class LFGPostDAO {
         LFGPost lfgPost = (LFGPost) session.get(LFGPost.class, id);
         return lfgPost;
     }
-
 
     /** Get a list of posts for the given search parameters
      *
@@ -88,7 +88,6 @@ public class LFGPostDAO {
         return lfgPosts;
     }
 
-
     /** save or update post
      * @param lfgPost
      * @return id of the inserted lfg post
@@ -98,7 +97,42 @@ public class LFGPostDAO {
         Transaction transaction = session.beginTransaction();
         session.save(lfgPost);
         transaction.commit();
+        trimMessages();
+    }
 
+    /**
+     * trim LFG posts to fit max, called on new post insert
+     */
+    public void trimMessages() {
+        int MAX_MESSAGES_COUNT = Integer.parseInt(properties.getProperty("posts.max"));
+
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Long postCountLong = (Long) session.createCriteria(LFGPost.class).setProjection(Projections.rowCount()).uniqueResult();
+        int postCount = postCountLong.intValue();
+        if (postCount > MAX_MESSAGES_COUNT) {
+            // Calculate the difference between the correct and current amount of messages
+            int difference = postCount - MAX_MESSAGES_COUNT;
+            List<LFGPost> lfgPosts;
+            // Order by ascending to make sure we get the oldest messages, only select as many messages as we're over
+            lfgPosts = session.createCriteria(LFGPost.class).setMaxResults(difference).addOrder(Order.asc("postID")).list();
+            Transaction transaction = null;
+            try {
+                transaction = session.beginTransaction();
+                for (LFGPost lfgPost : lfgPosts) {
+                    session.delete(lfgPost);
+                }
+            }  catch(RuntimeException e) {
+                // Check if null to prevent null-pointer exceptions on rollback
+                if (transaction != null) {
+                    transaction.rollback();
+                }
+            } finally {
+                //Make sure to commit any changes, then close the session
+                transaction.commit();
+                session.flush();
+                session.close();
+            }
+        }
     }
 
 }

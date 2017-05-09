@@ -46,10 +46,10 @@ public class UserDAOTest {
     public void registerUser() throws Exception {
         UserDAO dao = new UserDAO();
         //Rollback is not working. Will insert and commit every time.
-//        dao.registerUser("testusername", "testpassword");
-//
-//        User user = dao.getUserByName("testusername");
-//        assert(user != null);
+        dao.registerUser("testusername", "testpassword");
+
+        User user = dao.getUserByName("testusername");
+        assert(user != null);
     }
 
     @Test
@@ -79,6 +79,7 @@ public class UserDAOTest {
         assertEquals(wowUser, oldUser.getWowUser());
 
     }
+
 
 
 

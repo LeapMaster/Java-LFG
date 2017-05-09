@@ -57,7 +57,8 @@
 
                     </td>
                     <td id="outputCol4">
-                            ${currentPost.getMinutesAgo()}
+                        ${currentPost.getMinutesAgo()}
+                        ${currentPost.experience}<br/>
                         <c:choose>
                             <c:when test="${currentPost.haveMic == true}">
                                 <div class="divCenteredContent">
@@ -65,7 +66,6 @@
                                 </div>
                             </c:when>
                         </c:choose>
-                            ${currentPost.experience}<br/>
                     </td>
                 </tr>
 
