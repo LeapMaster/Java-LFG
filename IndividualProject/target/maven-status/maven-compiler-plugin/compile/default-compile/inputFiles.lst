@@ -1,12 +1,12 @@
 /home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/controller/RegisterServlet.java
+/home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/controller/PropertiesFileLoader.java
 /home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/entity/User.java
+/home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/controller/NewPostServlet.java
 /home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/persistence/SessionFactoryProvider.java
 /home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/persistence/LFGPostDAO.java
 /home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/controller/LoginServlet.java
 /home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/controller/LogoutServlet.java
-/home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/controller/NewPost.java
 /home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/controller/IndexServlet.java
-/home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/controller/RunSearch.java
 /home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/controller/ProfileServlet.java
 /home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/entity/LFGPost.java
 /home/student/Java-LFG/IndividualProject/src/main/java/com/sheaprewett/javalfg/controller/RegistrationSuccess.java

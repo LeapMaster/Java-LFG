@@ -171,7 +171,7 @@ public class IndexServlet extends HttpServlet {
             parameters.put("lookingFor", lookingFor);
         }
 
-        logger.info(parameters);
+        logger.debug(parameters);
         LFGPostDAO lfgDAO = new LFGPostDAO();
         // Run the filtered search
         List<LFGPost> lfgPosts = lfgDAO.filteredSearch(parameters);
@@ -190,13 +190,9 @@ public class IndexServlet extends HttpServlet {
         if (session != null) {
             if (session.getAttribute("username") != null) {
                 username = (String) session.getAttribute("username");
-                logger.info("WE GOT AN ATTRIBUTE! " + username);
-            } else {
-                logger.info("NULL ATTRIBUTE");
             }
-        } else {
-            logger.info("NULL SESSION");
         }
+        // Return username if logged in, empty string if not
         return username;
     }
 
@@ -207,7 +203,9 @@ public class IndexServlet extends HttpServlet {
      */
     public User getUserData(String username) {
         UserDAO dao = new UserDAO();
+        // Query for user by their username
         User user = dao.getUserByName(username);
+        // Return the query result
         return user;
 
     }

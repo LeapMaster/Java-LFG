@@ -311,6 +311,7 @@
                                             </div>
                                         </td>
                                         <td>
+
                                             <input type="submit" name="submit" value="Submit" />
                                         </td>
                                         <td>
@@ -318,6 +319,7 @@
                                         </td>
                                     </tr>
                                 </table>
+
                             </form>
                         </c:otherwise>
                     </c:choose>

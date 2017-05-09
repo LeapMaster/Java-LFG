@@ -1,5 +1,7 @@
 #Shea Prewett Time Log
 
+Note: time logged here is a rough estimate, and generally recorded after-the-fact.
+
 ###Week 1
 - 2 hours on the Exercise. 
 
@@ -51,3 +53,13 @@
 ###Week 13
 -2 Hours working on week 13 exercise
 -3 Hours working on Individual Project
+
+###Week 14
+-2 Hours working on code reviews
+-16 Hours working on Individual Project
+
+###Week 15
+-None, worked entirely on other classes.
+
+#Week 16
+-20 Hours working on Individual Project

@@ -20,8 +20,15 @@
 - [X] Add post insert and filtered query functionality
 
 ## Week 11
-- [ ] Move insert and filtered query functionality to same page
+- [X] Move insert and filtered query functionality to same page
 
 ### Week 12
-- [ ] Implement Destiny user profile REST service
-- [ ] Using the data from this REST service, implement User objects and UserAuth functionality
+- [X] Implement ~~Destiny~~ WoW user profile REST service
+- [X] Using the data from this REST service, implement User objects and UserAuth functionality
+
+## Week 14
+- [X] Implement a javascript plugin to streamline form authentication
+- [X] Finalize CSS and make everything look nice
+
+## Week 16
+- [ ] Cleanup, make sure everything is tested and commented, redundant or unused code is cleared out, implement properties file and self-trimming database

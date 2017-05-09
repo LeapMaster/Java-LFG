@@ -3,11 +3,10 @@ com/sheaprewett/javalfg/entity/LFGPost.class
 com/sheaprewett/javalfg/controller/RegisterServlet.class
 com/sheaprewett/javalfg/controller/IndexServlet.class
 com/sheaprewett/javalfg/controller/RegistrationSuccess.class
-com/sheaprewett/javalfg/controller/NewPost.class
 com/sheaprewett/javalfg/persistence/SessionFactoryProvider.class
 com/sheaprewett/javalfg/persistence/UserDAO.class
+com/sheaprewett/javalfg/controller/PropertiesFileLoader.class
 com/sheaprewett/javalfg/controller/LoginServlet.class
 com/sheaprewett/javalfg/controller/ProfileServlet.class
 com/sheaprewett/javalfg/persistence/LFGPostDAO.class
 com/sheaprewett/javalfg/entity/User.class
-com/sheaprewett/javalfg/controller/RunSearch.class

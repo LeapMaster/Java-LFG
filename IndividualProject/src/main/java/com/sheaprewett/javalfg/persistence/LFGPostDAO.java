@@ -61,16 +61,15 @@ public class LFGPostDAO {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Criteria filter = session.createCriteria(LFGPost.class);
 
-
+        // Loop through the map of fields and values
         Iterator iterator = parameters.entrySet().iterator();
         while (iterator.hasNext()) {
             HashMap.Entry pair = (HashMap.Entry)iterator.next();
             String key = String.valueOf(pair.getKey());
             String value = String.valueOf(pair.getValue());
-//            logger.log(Priority.INFO, key + " = " + value);
+            logger.debug(key + " = " + value);
             if (key.equals("level") || key.equals("gearRating")) {
-//                logger.log(Priority.INFO, "+" + value + "+");
-//                Integer minimum = Integer.parseInt("70");
+                logger.debug("+" + value + "+");
                 Criterion currentCriterion = Restrictions.ge(key, Integer.parseInt(value));
                 filter.add(currentCriterion);
             } else if (key.equals("haveMic")) {
@@ -85,7 +84,7 @@ public class LFGPostDAO {
             iterator.remove(); // avoids a ConcurrentModificationException
         }
         lfgPosts = filter.addOrder(Order.desc("id")).list();
-//        logger.log(Priority.INFO, lfgPosts);
+        logger.debug(lfgPosts);
         return lfgPosts;
     }
 
@@ -94,7 +93,6 @@ public class LFGPostDAO {
      * @param lfgPost
      * @return id of the inserted lfg post
      */
-
     public void save(LFGPost lfgPost) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();

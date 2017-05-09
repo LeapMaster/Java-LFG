@@ -58,8 +58,6 @@ public class LoginServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        final Logger logger = Logger.getLogger(this.getClass());
-
         // Get form parameters
         String username = request.getParameter("username");
         String password = request.getParameter("password");

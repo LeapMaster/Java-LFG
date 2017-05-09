@@ -104,12 +104,12 @@ public class User {
     }
 
     public String toString() {
-        return "_User_: username: " + username
+        return "User: {username: " + username
                 + ", userID: " + userID
                 + ", wowUser: " + wowUser
                 + ", wowRealm: " + wowRealm
                 + ", characterLevel: " + characterLevel
-                + ", itemLevel: " + itemLevel;
+                + ", itemLevel: " + itemLevel + "}";
     }
 
 

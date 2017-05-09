@@ -19,13 +19,14 @@
 |looking_for  | varchar(10)  | YES  |     | NULL    | |
 
 ## users (WIP)
-| Field      | Type        | Null | Key | Default | Extra |
+| Field        | Type        | Null | Key | Default | Extra |
 |---|---|---|---|---|---|
-| user_name  | varchar(15) | NO   | PRI | NULL    |       |
-| user_pass  | varchar(15) | NO   |     | NULL    |       |
-| wow_user   | varchar(50) | YES  |     | NULL    |       |
-| wow_realm  | varchar(20) | YES  |     | NULL    |       |
-| char_level | int(5)      | YES  |     | NULL    |       |
-| item_level | int(5)      | YES  |     | NULL    |       |
+| user_name    | varchar(15) | NO   | PRI | NULL    |       |
+| user_pass    | varchar(15) | NO   |     | NULL    |       |
+| wow_user     | varchar(50) | YES  |     | NULL    |       |
+| wow_realm    | varchar(20) | YES  |     | NULL    |       |
+| char_level   | int(5)      | YES  |     | NULL    |       |
+| item_level   | int(5)      | YES  |     | NULL    |       |
+| player_class | varchar(25)      | YES  |     | NULL    |       |
 
 

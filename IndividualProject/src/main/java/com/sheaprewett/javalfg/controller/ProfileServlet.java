@@ -21,6 +21,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.Properties;
 
 /**
  * Created by student on 4/27/17.
@@ -33,15 +34,19 @@ public class ProfileServlet extends HttpServlet {
 
     // Instantiate logger for use throughout the class
     final Logger logger = Logger.getLogger(this.getClass());
+    // Instantiate and load the properties file
+    private Properties properties = new PropertiesFileLoader().loadProperties();
+
 
     /**
      * Handles GET requests
      * Checks if user is logged in, and sends page user data if they are
      * Also sets page message on failed character linking
-     * @param request the servlet request
+     *
+     * @param request  the servlet request
      * @param response the servlet response
      * @throws ServletException if there is a Servlet failure
-     * @throws IOException if there is an IO failure
+     * @throws IOException      if there is an IO failure
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -67,7 +72,7 @@ public class ProfileServlet extends HttpServlet {
 
         } else {
             // User tried to view this page before logged in; shouldn't be accessible through normal page flow
-            logger.info("Not logged in for profile!");
+            logger.debug("Not logged in for profile!");
             request.setAttribute("loggedIn", "false");
             request.setAttribute("PageMessage", "You must log in to use this page.");
         }
@@ -78,11 +83,12 @@ public class ProfileServlet extends HttpServlet {
 
     /**
      * Processes request to link character, then redirects to GET request
-     * @param request the servlet request
+     *
+     * @param request  the servlet request
      * @param response the servlet response
      * @throws ServletException if there is a Servlet failure
-     * @throws IOException if there is an IO failure
-     * Handles POST requests
+     * @throws IOException      if there is an IO failure
+     *                          Handles POST requests
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -96,17 +102,23 @@ public class ProfileServlet extends HttpServlet {
 
         JsonObject json = getProfileInfo(wowUsername, wowRealm);
         if (json != null) {
-            logger.info(json.get("name"));
-            logger.info(json.get("level"));
-            logger.info(json.getAsJsonObject("items").get("averageItemLevel"));
+            // Successfully loaded character data as JSON
+            logger.info("Loaded character " + json.get("name"));
+            //Load the currently logged-in User
             UserDAO dao = new UserDAO();
             HttpSession session = request.getSession();
             User user = dao.getUserByName((String) session.getAttribute("username"));
+
+            // Update the user with fields from API JSON
             user.setWowUser(wowUsername);
             user.setWowRealm(wowRealm);
-            user.setPlayerClass(getClassString(json.get("class").getAsInt()));
             user.setCharacterLevel(json.get("level").getAsInt());
             user.setItemLevel(json.getAsJsonObject("items").get("averageItemLevel").getAsInt());
+
+            // Player class is retrieved as an int, so we need to find the associated player class name as a String
+            user.setPlayerClass(getClassString(json.get("class").getAsInt()));
+
+            //Query to update the user
             dao.editUser(user);
             response.sendRedirect(request.getContextPath() + "/profile");
 
@@ -122,16 +134,22 @@ public class ProfileServlet extends HttpServlet {
 
     /**
      * Use form parameters to query Blizzard API for valid character data
+     *
      * @param username the form character username parameter
-     * @param realm the form character realm parameter
+     * @param realm    the form character realm parameter
      * @return a Gson Json Object of character data, or null if one isn't found
      */
     public JsonObject getProfileInfo(String username, String realm) {
-        logger.info("test");
-        String apiKey = "6951b9e994824aa0b7c7d828bd435bee";
+        logger.debug("Getting profile Info");
+
+        // Load the properties file to build out the endpoint
+        logger.info("Properties" + properties);
+        String apiKey = properties.getProperty("api.key");
+        String endpointPart1 = properties.getProperty("api.endpointPart1");
+        String endpointPart2 = properties.getProperty("api.endpointPart2");
 
         // Endpoint for character data API; add realm and username fields to URL as parameters
-        String url = "https://us.api.battle.net/wow/character/" + realm + "/" + username + "?fields=items&locale=en_US&apikey=fx4memxf63y6jvddy89aht9psncrderp";
+        String url = endpointPart1 + realm + "/" + username + endpointPart2 + apiKey;
 
         URL obj;
         HttpURLConnection con;
@@ -141,8 +159,8 @@ public class ProfileServlet extends HttpServlet {
             con.setRequestMethod("GET");
             //Send the request
             int responseCode = con.getResponseCode();
-            logger.info("\nSending 'GET' request to Blizzard API : " + url);
-            logger.info("Response Code : " + responseCode);
+            logger.debug("\nSending 'GET' request to Blizzard API : " + url);
+            logger.debug("Response Code : " + responseCode);
             BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
             String inputLine;
             String response = "";
@@ -150,7 +168,6 @@ public class ProfileServlet extends HttpServlet {
             while ((inputLine = in.readLine()) != null) {
                 response += inputLine;
             }
-
             in.close();
 
             // Uses Gson - https://github.com/google/gson
@@ -158,7 +175,7 @@ public class ProfileServlet extends HttpServlet {
             JsonObject json = (JsonObject) parser.parse(response);
 
 
-            logger.info("Character " + json.get("name") + " was retrieved.");
+            logger.debug("Character " + json.get("name") + " was retrieved.");
             return json;
 
         } catch (MalformedURLException e) {
@@ -173,25 +190,15 @@ public class ProfileServlet extends HttpServlet {
 
     /**
      * Convert integer returned by API into a String of the player class's name
+     *
      * @param classNumber the integer from the API representing player class
      * @return String of the character class's name
      */
-    public String getClassString (int classNumber) {
-        // Create map matching integers with the name of the class they represent
-        HashMap<Integer, String> characterClassMap = new HashMap<Integer, String>();
-        characterClassMap.put(1, "Warrior");
-        characterClassMap.put(2, "Paladin");
-        characterClassMap.put(3, "Hunter");
-        characterClassMap.put(4, "Rogue");
-        characterClassMap.put(5, "Priest");
-        characterClassMap.put(6, "Death Knight");
-        characterClassMap.put(7, "Shaman");
-        characterClassMap.put(8, "Mage");
-        characterClassMap.put(9, "Warlock");
-        characterClassMap.put(10, "Monk");
-        characterClassMap.put(11, "Druid");
-        characterClassMap.put(12, "Demon Hunter");
-        // Return the name of the class matching the integer
-        return characterClassMap.get(classNumber);
+    public String getClassString(int classNumber) {
+        // Load the player class name from the properties file
+        String propertyPath = "character.class" + classNumber;
+        String playerClass = (String) properties.get(propertyPath);
+        // Return the name of the player class matching the integer
+        return playerClass;
     }
 }
