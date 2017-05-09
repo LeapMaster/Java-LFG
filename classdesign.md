@@ -5,13 +5,15 @@
 ### IndexServlet
 - Loads initial home page with query of latest posts.
 - Processes filtered search of posts
-- Processes new post insert
 
 ### LoginServlet
 - Processes user login and redirects according. Sets session attribute for logged user on success.
 
 ### LogoutServlet
 - Invalidates session and redirects back home.
+
+### NewPostServlet
+- Processes new post insert, redirects back to home page
 
 ### Profile Servlet
 - Loads data for logged in user, and allows users to change that data
