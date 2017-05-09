@@ -50,30 +50,7 @@
                     ${currentPost.getMinutesAgo()}
                 </td>
             </tr>
-
         </c:forEach>
-        <%--<tr>--%>
-            <%--<td>--%>
-                <%--Platform--%>
-            <%--</td>--%>
-            <%--<td>--%>
-                <%--Username<br/>--%>
-                <%--Level#/Class/Gear#<br/>--%>
-                <%--Region--%>
-            <%--</td>--%>
-            <%--<td class="description">--%>
-                <%--LFG - Activity Name<br/>--%>
-                <%--Description Text Goes Here--%>
-            <%--</td>--%>
-            <%--<td>--%>
-                <%--Mic<br/>--%>
-                <%--Sherpa<br/>--%>
-                <%--Novice<br/>--%>
-            <%--</td>--%>
-            <%--<td>--%>
-                <%--X Minutes Ago--%>
-            <%--</td>--%>
-        <%--</tr>--%>
     </table>
 </body>
 </html>

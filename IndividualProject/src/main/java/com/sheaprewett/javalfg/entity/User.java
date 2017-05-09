@@ -18,6 +18,21 @@ public class User {
     @Column(name="user_pass")
     private String password;
 
+    @Column(name="wow_user")
+    private String wowUser;
+
+    @Column(name="wow_realm")
+    private String wowRealm;
+
+    @Column(name="char_level", nullable = true)
+    private Integer characterLevel;
+
+    @Column(name="item_level", nullable = true)
+    private Integer itemLevel;
+
+    @Column(name="player_class")
+    private String playerClass;
+
     @Id
     @GeneratedValue(generator="increment")
     @GenericGenerator(name="increment", strategy = "increment")
@@ -44,11 +59,58 @@ public class User {
         return userID;
     }
 
-    public void getUserID(int postID) {
-        this.userID = postID;
+    public void setUserID(int userID) {
+        this.userID = userID;
     }
 
+    public String getWowUser() {
+        return wowUser;
+    }
 
+    public void setWowUser(String wowUser) {
+        this.wowUser = wowUser;
+    }
+
+    public String getWowRealm() {
+        return wowRealm;
+    }
+
+    public void setWowRealm(String wowRealm) {
+        this.wowRealm = wowRealm;
+    }
+
+    public Integer getCharacterLevel() {
+        return characterLevel;
+    }
+
+    public void setCharacterLevel(Integer characterLevel) {
+        this.characterLevel = characterLevel;
+    }
+
+    public Integer getItemLevel() {
+        return itemLevel;
+    }
+
+    public void setItemLevel(Integer itemLevel) {
+        this.itemLevel = itemLevel;
+    }
+
+    public String getPlayerClass() {
+        return playerClass;
+    }
+
+    public void setPlayerClass(String playerClass) {
+        this.playerClass = playerClass;
+    }
+
+    public String toString() {
+        return "_User_: username: " + username
+                + ", userID: " + userID
+                + ", wowUser: " + wowUser
+                + ", wowRealm: " + wowRealm
+                + ", characterLevel: " + characterLevel
+                + ", itemLevel: " + itemLevel;
+    }
 
 
 }

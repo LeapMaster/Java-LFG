@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="panel-group" id="accordion">
-    <div class="panel panel-default">
+    <div class="panel panel-default formTable">
         <div class="panel-heading">
             <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Filters</a>
@@ -96,6 +96,7 @@
                                 <td>
                                     <input type="reset" name="reset" value="Clear" />
                                 </td>
+                                <td colspan="2"></td>
                             </tr>
                         </table>
                     </form>

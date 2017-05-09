@@ -15,5 +15,5 @@
     <li class="navitem"><a class="active" href=${pageContext.request.contextPath}>Home</a></li>
     <li class="navitem"><a href="${pageContext.request.contextPath}/profile">Profile</a></li>
     <li class="navitem"><a href="${pageContext.request.contextPath}/logout">Logout</a></li>
-    <%--<li class="navitem"><a href="#about">Full</a></li>--%>
+    <li class="navitem"><a>${UserMessage}</a></li>
 </ul>

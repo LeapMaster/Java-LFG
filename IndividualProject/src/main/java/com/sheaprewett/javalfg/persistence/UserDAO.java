@@ -3,6 +3,7 @@ package com.sheaprewett.javalfg.persistence;
 import com.sheaprewett.javalfg.entity.User;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
@@ -21,7 +22,7 @@ public class UserDAO {
      *
      * @return All posts
      */
-    public List<User> getAllLFGPosts() {
+    public List<User> getAllUsers() {
 
         List<User> users = new ArrayList<User>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
@@ -82,6 +83,36 @@ public class UserDAO {
                 transaction.rollback();
             }
             newID = -1;
+        } finally {
+            //Make sure to commit any changes, then close the session
+            transaction.commit();
+            session.flush();
+            session.close();
+
+        }
+
+
+        return "";
+    }
+
+    /** Edit user with character data
+     * @param user the edited User object
+     * @return String message of error or success
+     */
+    public String editUser(User user) {
+
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Transaction transaction = null;
+
+        try {
+            transaction = session.beginTransaction();
+            session.saveOrUpdate(user);
+        } catch(RuntimeException e) {
+            // Check if null to prevent null-pointer exceptions on rollback
+            if (transaction != null) {
+                transaction.rollback();
+                System.out.println("FAILED");
+            }
         } finally {
             //Make sure to commit any changes, then close the session
             transaction.commit();

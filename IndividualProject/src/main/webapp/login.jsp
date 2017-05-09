@@ -15,6 +15,7 @@
 
     <script src="js/jquery-3.1.1.min.js" charset="utf-8"></script>
     <script src="js/jquery.validate.js" charset="utf-8"></script>
+    <script src="js/login.js" charset="utf-8"></script>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 </head>
@@ -23,6 +24,15 @@
 ${PageMessage}
     <form id="loginForm" action="login" method="post">
         <table class="table formTable">
+            <c:choose>
+                <c:when test="${PageMessage} != null">
+                    <tr>
+                        <td>
+                            ${PageMessage}
+                        </td>
+                    </tr>
+                </c:when>
+            </c:choose>
             <tr>
                 <td>
                     <label>Please log in.</label>
@@ -52,7 +62,7 @@ ${PageMessage}
         </table>
     </form>
 <script>
-    $("#loginForm").validate();
+
 </script>
 </body>
 </html>

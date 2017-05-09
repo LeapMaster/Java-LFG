@@ -29,20 +29,31 @@ import java.util.List;
 )
 public class RunSearch extends HttpServlet {
 
+    // Instantiate logger for use throughout the class
+    final Logger logger = Logger.getLogger(this.getClass());
+
+    /**
+     * Handles POST requests
+     *
+     * @param request the servlet request
+     * @param response the servlet request
+     * @throws ServletException if there is a Servlet failure
+     * @throws IOException if there is an IO failure
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        // Instantiate map to hold search parameters matched with field name
         HashMap<String, String> parameters = new HashMap<String, String>();
 
-
         final Logger logger = Logger.getLogger(this.getClass());
-        logger.info("RUN SEARCH");
+        logger.info("Running filtered search");
 
         String platform = request.getParameter("platform");
-
         if (platform.equals("any")) {
             // No search parameters
         } else {
+            // Add parameter and value to map
             parameters.put("platform", platform);
         }
 
@@ -50,6 +61,7 @@ public class RunSearch extends HttpServlet {
         if (region.equals("any")) {
             // No search parameters
         } else {
+            // Add parameter and value to map
             parameters.put("region", region);
         }
 
@@ -58,6 +70,7 @@ public class RunSearch extends HttpServlet {
         if (activity.equals("any")) {
             // No search parameters
         } else {
+            // Add parameter and value to map
             parameters.put("activity", activity);
         }
 
@@ -66,11 +79,13 @@ public class RunSearch extends HttpServlet {
         if (experience.equals("any")) {
             // No search parameters
         } else {
+            // Add parameter and value to map
             parameters.put("experience", experience);
         }
 
         String levelString = request.getParameter("level");
         if (!levelString.equals("")) {
+            // Add parameter and value to map, making sure it's a valid integer
             int level = Integer.valueOf(levelString);
             if (level > 0) {
                 parameters.put("level", String.valueOf(level));
@@ -81,6 +96,7 @@ public class RunSearch extends HttpServlet {
 
         String gearRatingString = request.getParameter("gearRating");
         if (!gearRatingString.equals("")) {
+            // Add parameter and value to map, making sure it's a valid integer
             int gearRating = Integer.valueOf(gearRatingString);
             if (gearRating > 0) {
                 parameters.put("gearRating", String.valueOf(gearRating));
@@ -93,8 +109,8 @@ public class RunSearch extends HttpServlet {
         String requireMic = request.getParameter("requireMic");
         if (requireMic == null) {
             // No search parameter
-
         } else {
+            // Add parameter and value to map
             parameters.put("requireMic", "true");
         }
 
@@ -104,19 +120,17 @@ public class RunSearch extends HttpServlet {
         if (lookingFor.equals("all")) {
             // No search parameter
         } else {
+            // Add parameter and value to map
             parameters.put("lookingFor", lookingFor);
         }
 
-//        String playerClass = request.getParameter("playerClass");
-//        if (playerClass.equals("none")) {s
-//            validForm = false;
-//            errorFields.add("playerClass");
-//        }
-
         logger.info(parameters);
         LFGPostDAO lfgDAO = new LFGPostDAO();
+        // Run the filtered search
         List<LFGPost> lfgPosts = lfgDAO.filteredSearch(parameters);
+        // Set list of found posts as page attribute
         request.setAttribute("allPosts", lfgPosts);
+        // Forward to page with search results
         RequestDispatcher dispatcher = request.getRequestDispatcher("/results.jsp");
         dispatcher.forward(request, response);
 

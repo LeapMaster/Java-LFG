@@ -1,7 +1,9 @@
 package com.sheaprewett.javalfg.controller;
 
 import com.sheaprewett.javalfg.entity.LFGPost;
+import com.sheaprewett.javalfg.entity.User;
 import com.sheaprewett.javalfg.persistence.LFGPostDAO;
+import com.sheaprewett.javalfg.persistence.UserDAO;
 import org.apache.log4j.Logger;
 import org.apache.log4j.Priority;
 
@@ -24,55 +26,85 @@ import java.util.List;
 )
 public class IndexServlet extends HttpServlet {
 
+    // Instantiate logger for use throughout the class
     final Logger logger = Logger.getLogger(this.getClass());
 
+    /**
+     * Handles GET requests
+     * Run initial, parameter-less search and forward to home page with results and logged-in User data
+     * @param request the servlet request
+     * @param response the servlet request
+     * @throws ServletException if there is a Servlet failure
+     * @throws IOException if there is an IO failure
+     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<LFGPost> lfgPosts = runInitialSearch(request, response);
+        // Create list of all LFGPosts
+        List<LFGPost> lfgPosts = runInitialSearch();
         request.setAttribute("allPosts", lfgPosts);
-        request.setAttribute("UserMessage", getUserInfo(request));
+
+        // Check for logged-in user; send user data to page if one is set
+        String currentUsername = getLoggedUsername(request);
+        if (currentUsername.length() > 0) {
+            request.setAttribute("UserMessage", "Welcome back " + currentUsername);
+            request.setAttribute("currentUser", getUserData(currentUsername));
+        }
+        // Forward to home page with search results and User data
         RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
         dispatcher.forward(request, response);
     }
 
+    /**
+     * Handles POST requests
+     * Process filtered search from home page
+     * @param request the servlet request
+     * @param response the servlet request
+     * @throws ServletException if there is a Servlet failure
+     * @throws IOException if there is an IO failure
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<LFGPost> lfgPosts = runFilteredSearch(request, response);
+        List<LFGPost> lfgPosts = runFilteredSearch(request);
         request.setAttribute("allPosts", lfgPosts);
-        request.setAttribute("UserMessage", getUserInfo(request));
+        request.setAttribute("UserMessage", "Welcome back " + getLoggedUsername(request));
         RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
 
         dispatcher.forward(request, response);
     }
 
-
-    public List<LFGPost> runInitialSearch(HttpServletRequest request, HttpServletResponse response) {
-        HashMap<String, String> parameters = new HashMap<String, String>();
-
-
-
-        logger.info("RUN SEARCH");
-
-
-        logger.info(parameters);
+    /**
+     * Get all LFG Posts
+     * @return a list of all LFG Posts
+     */
+    public List<LFGPost> runInitialSearch() {
         LFGPostDAO lfgDAO = new LFGPostDAO();
-        List<LFGPost> lfgPosts = lfgDAO.filteredSearch(parameters);
+        // Use filtered search
+        List<LFGPost> lfgPosts = lfgDAO.getAllLFGPosts();
 
         return lfgPosts;
     }
 
-    public List<LFGPost> runFilteredSearch(HttpServletRequest request, HttpServletResponse response) {
+    /**
+     * Get LFG Posts that fit search parameters
+     * @param request
+     * @return a list of matching LFG Posts
+     */
+    public List<LFGPost> runFilteredSearch(HttpServletRequest request) {
+
+        // Instantiate map to hold search parameters matched with field name
         HashMap<String, String> parameters = new HashMap<String, String>();
 
-
         final Logger logger = Logger.getLogger(this.getClass());
-        logger.info("RUN SEARCH");
+        logger.info("Running filtered search");
+
+        // Using the sent HttpServletRequest, get the value for each form input
+        // If a non-default value is set, add the field name and value to the map to be searched on
 
         String platform = request.getParameter("platform");
-
         if (platform.equals("any")) {
             // No search parameters
         } else {
+            // Add parameter and value to map
             parameters.put("platform", platform);
         }
 
@@ -80,27 +112,29 @@ public class IndexServlet extends HttpServlet {
         if (region.equals("any")) {
             // No search parameters
         } else {
+            // Add parameter and value to map
             parameters.put("region", region);
         }
-
 
         String activity = request.getParameter("activity");
         if (activity.equals("any")) {
             // No search parameters
         } else {
+            // Add parameter and value to map
             parameters.put("activity", activity);
         }
-
 
         String experience = request.getParameter("experience");
         if (experience.equals("any")) {
             // No search parameters
         } else {
+            // Add parameter and value to map
             parameters.put("experience", experience);
         }
 
         String levelString = request.getParameter("level");
         if (!levelString.equals("")) {
+            // Add parameter and value to map, making sure it's a valid integer
             int level = Integer.valueOf(levelString);
             if (level > 0) {
                 parameters.put("level", String.valueOf(level));
@@ -111,6 +145,7 @@ public class IndexServlet extends HttpServlet {
 
         String gearRatingString = request.getParameter("gearRating");
         if (!gearRatingString.equals("")) {
+            // Add parameter and value to map, making sure it's a valid integer
             int gearRating = Integer.valueOf(gearRatingString);
             if (gearRating > 0) {
                 parameters.put("gearRating", String.valueOf(gearRating));
@@ -119,50 +154,62 @@ public class IndexServlet extends HttpServlet {
             // No search parameters
         }
 
-
         String requireMic = request.getParameter("requireMic");
         if (requireMic == null) {
             // No search parameter
-
         } else {
+            // Add parameter and value to map
             parameters.put("haveMic", "true");
         }
-
 
 
         String lookingFor = request.getParameter("lookingFor");
         if (lookingFor.equals("all")) {
             // No search parameter
         } else {
+            // Add parameter and value to map
             parameters.put("lookingFor", lookingFor);
         }
 
-//        String playerClass = request.getParameter("playerClass");
-//        if (playerClass.equals("none")) {s
-//            validForm = false;
-//            errorFields.add("playerClass");
-//        }
-
         logger.info(parameters);
         LFGPostDAO lfgDAO = new LFGPostDAO();
+        // Run the filtered search
         List<LFGPost> lfgPosts = lfgDAO.filteredSearch(parameters);
+        // Return the list of found posts
         return lfgPosts;
     }
 
-    public String getUserInfo(HttpServletRequest request) {
-        HttpSession session=request.getSession(false);
-        String userMessage = "";
+    /**
+     * Check session for logged-in user, and return their username if they exist
+     * @param request servlet request with session tied to it
+     * @return String containing username, or blank space if one isn't found
+     */
+    public String getLoggedUsername(HttpServletRequest request) {
+        HttpSession session = request.getSession(false);
+        String username = "";
         if (session != null) {
             if (session.getAttribute("username") != null) {
-                userMessage = "Welcome back " + (String) session.getAttribute("username");
-                logger.info("WE GOT AN ATTRIBUTE! " + userMessage);
+                username = (String) session.getAttribute("username");
+                logger.info("WE GOT AN ATTRIBUTE! " + username);
             } else {
                 logger.info("NULL ATTRIBUTE");
             }
         } else {
             logger.info("NULL SESSION");
         }
-        return userMessage;
+        return username;
+    }
+
+    /**
+     * Take username and return their data
+     * @param username the username to be queried for
+     * @return User object matching username
+     */
+    public User getUserData(String username) {
+        UserDAO dao = new UserDAO();
+        User user = dao.getUserByName(username);
+        return user;
+
     }
 
 

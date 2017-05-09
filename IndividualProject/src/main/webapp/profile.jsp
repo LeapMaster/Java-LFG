@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/formValidation.css">
 </head>
 <body>
     <c:choose>
@@ -22,109 +23,90 @@
                 <table class="table formTable">
                     <tr>
                         <td>
-                            <label>Edit Profile:</label>
+                            <c:choose>
+                                <c:when test="${!PageErrorMessage.equals(null)}">
+                                    <div class="error">${PageErrorMessage}</div>
+                                </c:when>
+                            </c:choose>
+                            <label>Link your WoW Profile to speed up LFG listing!</label>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <label for="username">Username:</label>
-                            <input id="username" name="username" type="text" value="${username}" />
+                            <label for="username">Username: ${currentUser.username}</label>
+                            <input id="username" name="username" type="text" value="${currentUser.username}" hidden/>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <label for="wowUsername">WoW Username:</label>
-                            <input id="wowUsername" name="wowUsername" type="text" value="" />
+                            <input id="wowUsername" name="wowUsername" type="text" value="${currentUser.wowUser}" />
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <label for="wowRealm">WoW Region:</label>
-
+                            <label for="wowRealm">WoW Region: </label>
+                            <c:choose>
+                                <c:when test="${currentUser.wowRealm != null}">
+                                    <label>(Current Realm: ${currentUser.wowRealm})</label>
+                                </c:when>
+                            </c:choose>
                             <select id="wowRealm" name="wowRealm" class="form-control" required>
-
                                 <option value="">Select a Region</option>
-                                <option value="Blackrock">Blackrock</option>
-                                <option value="Blackwing Lair">Blackwing Lair</option>
-                                <option value="Bonechewer">Bonechewer</option>
-                                <option value="Boulderfist">Boulderfist</option>
-                                <option value="Coilfang">Coilfang</option>
-                                <option value="Crushridge">Crushridge</option>
-                                <option value="Daggerspine">Daggerspine</option>
-                                <option value="Dark Iron">Dark Iron</option>
-                                <option value="Destromath">Destromath</option>
-                                <option value="Dethecus">Dethecus</option>
-                                <option value="Dragonmaw">Dragonmaw</option>
-                                <option value="Dunemaul">Dunemaul</option>
-                                <option value="Frostwolf">Frostwolf</option>
-                                <option value="Gorgonnash">Gorgonnash</option>
-                                <option value="Gurubashi">Gurubashi</option>
-                                <option value="Kalecgos">Kalecgos</option>
-                                <option value="Kil'Jaeden">Kil'Jaeden</option>
-                                <option value="Lethon">Lethon</option>
-                                <option value="Maiev">Maiev</option>
-                                <option value="Nazjatar">Nazjatar</option>
-                                <option value="Ner'zhul">Ner'zhul</option>
-                                <option value="Onyxia">Onyxia</option>
-                                <option value="Rivendare">Rivendare</option>
-                                <option value="Shattered Halls">Shattered Halls</option>
-                                <option value="Spinebreaker">Spinebreaker</option>
-                                <option value="Spirestone">Spirestone</option>
-                                <option value="Stonemaul">Stonemaul</option>
-                                <option value="Stormscale">Stormscale</option>
-                                <option value="Tichondrius">Tichondrius</option>
-                                <option value="Ursin">Ursin</option>
-                                <option value="Vashj">Vashj</option>
-
-                            <%--<option value="">Select a Region</option>--%>
-                                <%--<option value="Aerie Peak">Aerie Peak</option>--%>
-                                <%--<option value="Anvilmar">Anvilmar</option>--%>
-                                <%--<option value="Arathor">Arathor</option>--%>
-                                <%--<option value="Antonidas">Antonidas</option>--%>
-                                <%--<option value="Azuremyst">Azuremyst</option>--%>
-                                <%--<option value="Baelgun">Baelgun</option>--%>
-                                <%--<option value="Blade's Edge">Blade's Edge</option>--%>
-                                <%--<option value="Bladefist">Bladefist</option>--%>
-                                <%--<option value="Bronzebeard">Bronzebeard</option>--%>
-                                <%--<option value="Cenarius">Cenarius</option>--%>
-                                <%--<option value="Darrowmere">Darrowmere</option>--%>
-                                <%--<option value="Draenor">Draenor</option>--%>
-                                <%--<option value="Dragonblight">Dragonblight</option>--%>
-                                <%--<option value="Echo Isles">Echo Isles</option>--%>
-                                <%--<option value="Galakrond">Galakrond</option>--%>
-                                <%--<option value="Gnomeregan">Gnomeregan</option>--%>
-                                <%--<option value="Hyjal">Hyjal</option>--%>
-                                <%--<option value="Kilrogg">Kilrogg</option>--%>
-                                <%--<option value="Korialstrasz">Korialstrasz</option>--%>
-                                <%--<option value="Lightbringer">Lightbringer</option>--%>
-                                <%--<option value="Misha">Misha</option>--%>
-                                <%--<option value="Moonrunner">Moonrunner</option>--%>
-                                <%--<option value="Nordrassil">Nordrassil</option>--%>
-                                <%--<option value="Proudmoore">Proudmoore</option>--%>
-                                <%--<option value="Shadowsong">Shadowsong</option>--%>
-                                <%--<option value="Shu'Halo">Shu'Halo</option>--%>
-                                <%--<option value="Silvermoon">Silvermoon</option>--%>
-                                <%--<option value="Skywall">Hyjal</option>--%>
-                                <%--<option value="Suramar">Suramar</option>--%>
-                                <%--<option value="Uldum">Uldum</option>--%>
-                                <%--<option value="Uther">Uther</option>--%>
-                                <%--<option value="Velen">Velen</option>--%>
-                                <%--<option value="Windrunner">Windrunner</option>--%>
+                                <option value="Blackrock"  ${currentUser.wowRealm.equals("Blackrock") ? "selected" : ""}>Blackrock</option>
+                                <option value="Blackwing Lair" ${currentUser.wowRealm.equals("Blackwing Lair") ? "selected" : ""}>Blackwing Lair</option>
+                                <option value="Bonechewer" ${currentUser.wowRealm.equals("Bonechewer") ? "selected" : ""}>Bonechewer</option>
+                                <option value="Boulderfist" ${currentUser.wowRealm.equals("Boulderfist") ? "selected" : ""}>Boulderfist</option>
+                                <option value="Coilfang" ${currentUser.wowRealm.equals("Coilfang") ? "selected" : ""}>Coilfang</option>
+                                <option value="Crushridge" ${currentUser.wowRealm.equals("Crushridge") ? "selected" : ""}>Crushridge</option>
+                                <option value="Daggerspine" ${currentUser.wowRealm.equals("Daggerspine") ? "selected" : ""}>Daggerspine</option>
+                                <option value="Dark Iron" ${currentUser.wowRealm.equals("Dark Iron") ? "selected" : ""}>Dark Iron</option>
+                                <option value="Destromath" ${currentUser.wowRealm.equals("Destromath") ? "selected" : ""}>Destromath</option>
+                                <option value="Dethecus" ${currentUser.wowRealm.equals("Dethecus") ? "selected" : ""}>Dethecus</option>
+                                <option value="Dragonmaw" ${currentUser.wowRealm.equals("Dragonmaw") ? "selected" : ""}>Dragonmaw</option>
+                                <option value="Dunemaul" ${currentUser.wowRealm.equals("Dunemaul") ? "selected" : ""}>Dunemaul</option>
+                                <option value="Frostwolf" ${currentUser.wowRealm.equals("Frostwolf") ? "selected" : ""}>Frostwolf</option>
+                                <option value="Gorgonnash" ${currentUser.wowRealm.equals("Gorgonnash") ? "selected" : ""}>Gorgonnash</option>
+                                <option value="Gurubashi" ${currentUser.wowRealm.equals("Gurubashi") ? "selected" : ""}>Gurubashi</option>
+                                <option value="Kalecgos" ${currentUser.wowRealm.equals("Kalecgos") ? "selected" : ""}>Kalecgos</option>
+                                <option value="Kil'Jaeden" ${currentUser.wowRealm.equals("Kil\'Jaeden") ? "selected" : ""}>Kil'Jaeden</option>
+                                <option value="Lethon" ${currentUser.wowRealm.equals("Lethon") ? "selected" : ""}>Lethon</option>
+                                <option value="Maiev" ${currentUser.wowRealm.equals("Maiev") ? "selected" : ""}>Maiev</option>
+                                <option value="Nazjatar" ${currentUser.wowRealm.equals("Nazjatar") ? "selected" : ""}>Nazjatar</option>
+                                <option value="Ner'zhul" ${currentUser.wowRealm.equals("Ner\'zhul") ? "selected" : ""}>Ner'zhul</option>
+                                <option value="Onyxia" ${currentUser.wowRealm.equals("Onyxia") ? "selected" : ""}>Onyxia</option>
+                                <option value="Rivendare" ${currentUser.wowRealm.equals("Rivendare") ? "selected" : ""}>Rivendare</option>
+                                <option value="Shattered Halls" ${currentUser.wowRealm.equals("Shattered Halls") ? "selected" : ""}>Shattered Halls</option>
+                                <option value="Spinebreaker" ${currentUser.wowRealm.equals("Spinebreaker") ? "selected" : ""}>Spinebreaker</option>
+                                <option value="Spirestone" ${currentUser.wowRealm.equals("Spirestone") ? "selected" : ""}>Spirestone</option>
+                                <option value="Stonemaul" ${currentUser.wowRealm.equals("Stonemaul") ? "selected" : ""}>Stonemaul</option>
+                                <option value="Stormscale" ${currentUser.wowRealm.equals("Stormscale") ? "selected" : ""}>Stormscale</option>
+                                <option value="Tichondrius" ${currentUser.wowRealm.equals("Tichondrius") ? "selected" : ""}>Tichondrius</option>
+                                <option value="Ursin" ${currentUser.wowRealm.equals("Ursin") ? "selected" : ""}>Ursin</option>
+                                <option value="Vashj" ${currentUser.wowRealm.equals("Vashj") ? "selected" : ""}>Vashj</option>
                             </select>
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-
-                        </td>
-                    </tr>
+                    <c:choose>
+                        <c:when test="${currentUser.characterLevel != null}">
+                            <tr>
+                                <td>
+                                    <label>
+                                        Player Class: ${currentUser.playerClass}<br />
+                                        Character Level: ${currentUser.characterLevel} <br />
+                                        Item Level: ${currentUser.itemLevel}
+                                    </label>
+                                </td>
+                            </tr>
+                        </c:when>
+                    </c:choose>
                     <tr>
                         <td>
                             <input type="submit" value="Submit Changes" />
-                            User ID: ${userID}
-                            Username: ${username}
                         </td>
                     </tr>
+
+
 
 
                 </table>
@@ -133,7 +115,13 @@
         </c:when>
         <c:otherwise>
             <c:import url="jsp/header-content.jsp" />
-            ${PageMessage}
+                <table class="table formTable">
+                    <tr>
+                        <td>
+                        You must log in to access this page.
+                        </td>
+                    </tr>
+                </table>
         </c:otherwise>
     </c:choose>
 </body>
