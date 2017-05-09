@@ -29,3 +29,4 @@
 | item_level | int(5)      | YES  |     | NULL    |       |
 
 
+Tables are unlinked to easily allow users to make posts anonymously.
