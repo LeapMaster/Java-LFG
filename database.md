@@ -19,7 +19,7 @@ Tables are unlinked to easily allow users to make posts anonymously.
 |experience   | varchar(10)  | YES  |     | NULL    | |
 |looking_for  | varchar(10)  | YES  |     | NULL    | |
 
-## users (WIP)
+## users
 | Field        | Type        | Null | Key | Default | Extra |
 |---|---|---|---|---|---|
 | user_name    | varchar(15) | NO   | PRI | NULL    |       |
